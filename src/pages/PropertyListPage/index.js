@@ -1,5 +1,5 @@
 import{ React,useState, useEffect} from 'react'
-import CardList from "../CardList";
+// import CardList from "../CardList";
 import axios from 'axios';
 import properties from '../../properties'
 import { useLocation } from 'react-router';
@@ -8,6 +8,7 @@ import Header from 'comman/components/Header';
 import { DifferentPropertiesHeader } from './components/DifferentPropertiesHeader';
 import { SubPropertyListHeader } from 'comman/components/SubPropertyListHeader';
 import { useSelector } from 'react-redux';
+import CardList from './components/CardList/indes';
 
 
  const PropertyListPage = ({city,setCity,setLocation}) => {
