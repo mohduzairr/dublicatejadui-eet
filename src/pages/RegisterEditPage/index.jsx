@@ -10,6 +10,7 @@ import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from 'comman/components/Header';
 import { SubHeader } from 'comman/components/SubHeader';
+import { ProfileHeader } from 'pages/ProfilePage/components/ProfileHeader';
 
 
 
@@ -114,6 +115,7 @@ export   const RegisterEditPage = () => {
         <>
         <Header/>
         <SubHeader/>
+        <ProfileHeader/>
              <div class="infotab9">
             <div class="cards infotab9-1 text-center">
                 <div class="card-header">
@@ -191,7 +193,7 @@ export   const RegisterEditPage = () => {
 
 
                                     <li>
-                                    <span className="mbl">+91</span>
+                                    <span className="mbl" style={{fontSize: 15}}>+91</span>
                                      <input style={{borderBlockStyle:"none"}} type="text" name="phone" placeholder="Mobile Number" class="p-form-control1" size="37"
                                        value={phone}
                                          onChange={(e) => setPhone(e.target.value)}

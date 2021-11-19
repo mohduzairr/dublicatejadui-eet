@@ -57,7 +57,7 @@ export const ProfileEdit = () => {
                             <ul>
                                 <li>Name:</li>
                                 {/* <li>Registered As::</li> */}
-                                <li>Country:</li>
+                                <li>user name:</li>
                                 <li>State:</li>
                                 <li>Email:</li>
                                 {/* <li>Alternate Email:</li> */}
@@ -71,7 +71,7 @@ export const ProfileEdit = () => {
                                 <ul>
                                     <li>{user?.data?.name}</li>
                                     {/* <li>Individual</li> */}
-                                    <li>{user?.data?.country}</li>
+                                    <li>{user?.data?.user_name}</li>
                                     <li>{user?.data?.state}</li>
                                     <li>{user?.data?.email}</li>
                                   {/* <li>Alternate Email:</li> */}
