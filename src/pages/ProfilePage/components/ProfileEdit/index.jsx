@@ -73,7 +73,7 @@ export const ProfileEdit = () => {
                                     {/* <li>Individual</li> */}
                                     <li>{user?.data?.country}</li>
                                     <li>{user?.data?.state}</li>
-                                    <li>emailll{user?.data?.email}</li>
+                                    <li>{user?.data?.email}</li>
                                   {/* <li>Alternate Email:</li> */}
 
                                     <li>{user?.data?.phone}<a href="#"></a></li>

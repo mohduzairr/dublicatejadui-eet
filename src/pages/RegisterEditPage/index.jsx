@@ -8,6 +8,8 @@ import properties from '../../properties'
 import axios from 'axios';
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
+import Header from 'comman/components/Header';
+import { SubHeader } from 'comman/components/SubHeader';
 
 
 
@@ -40,7 +42,7 @@ export   const RegisterEditPage = () => {
 
 
 
-    const submit = (e) => {
+    const update = (e) => {
         e.preventDefault();
 
         dispatch({
@@ -49,8 +51,6 @@ export   const RegisterEditPage = () => {
                 name:{name},
                 email:{email},
                 phone:{phone},
-             // country:response.country,
-             // state:response.state,
                 userName:{userName},
                 radio:{radio},
             }
@@ -90,10 +90,9 @@ export   const RegisterEditPage = () => {
         }
         return true;
     }
-
-    // { params: fetchData }
+   
     async function signup(newEntry) {
-        if(validateInputs()){
+        if(/*validateInputs*/ true){
             const config = {
                 headers: { Authorization: `Bearer ${user?.data?.token}`}
               };
@@ -112,6 +111,130 @@ export   const RegisterEditPage = () => {
  }
         
     return (
+        <>
+        <Header/>
+        <SubHeader/>
+             <div class="infotab9">
+            <div class="cards infotab9-1 text-center">
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills infotab9-1-1">
+                        <li class="nav-item">
+                            <a class="nav-link info-item9" href="#">Account Summary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link info-item9" href="#">Contact/Responses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link info-item9">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link info-item9">Properties Alerts</a>
+                        </li>
+                        <li class="nav-item item9-active">
+                            <a class="nav-link info-item9 ">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link info-item9">Subscription</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="infotab9-2">
+                <div class="infotab9-2-1">
+                    <div class="list-group">
+                        <a href="profile_edit.html" class="list-group-item list-group-item-action infoabs active"
+                            aria-current="true">
+                            Profile Details </a>
+                      <div> <a href="#" class="list-group-item list-group-item-action">Edit Login Details</a></div>
+                        <a href="change_password.html" class="list-group-item list-group-item-action">Change
+                            Password</a>
+                        <a href="send_message.html" class="list-group-item list-group-item-action">Saved Messages</a>
+                    </div>
+                </div>
+
+                <div class="infotab9-2-2">
+                    <div class="infotab922"> Profile Details</div>
+
+                    <div class="cards infotab91">
+                        <div class="card-header infotab91-1">
+                            <ul>
+                                <li>Name:</li>
+                                <li>Email:</li>
+                                <li>User name:</li>
+                                <li>Mobile:</li>
+                                <li>Password:</li>
+
+                            </ul>
+                        </div>
+                        <div class="card-bodys">
+                            <div class="card-header infotab91-2">
+                                <ul>
+                                    <li>
+                                <input style={{borderBlockStyle:"none"}} type="text" class="p-form-control" placeholder="Name" id="name"
+                                     name={name}
+                                      value={name}
+                                      onChange={(e) => setName(e.target.value)}
+
+                                  />
+                                  </li>
+                                    <li>
+                                    <input style={{borderBlockStyle:"none"}} type="text" class="p-form-control" placeholder="Email" id="email"
+                                     value={email}
+                                      onChange={(e) => setEmail(e.target.value)}/>
+                                     </li>
+                                    <li>
+                                    <input style={{borderBlockStyle:"none"}} type="text" class="p-form-control" placeholder="Username" id="username"
+                                       value={userName}
+                                       onChange={(e) => setUsername(e.target.value)} />
+                                    </li>
+
+
+                                    <li>
+                                    <span className="mbl">+91</span>
+                                     <input style={{borderBlockStyle:"none"}} type="text" name="phone" placeholder="Mobile Number" class="p-form-control1" size="37"
+                                       value={phone}
+                                         onChange={(e) => setPhone(e.target.value)}
+                                           />
+                                  </li>
+                                  <li>
+                                  <input style={{borderBlockStyle:"none"}} type="password" class="p-form-control" placeholder="Password" id="password"
+                                     value={password}
+                                     onChange={(e) => setPassword(e.target.value)}
+
+                                     />
+                                  </li>
+
+                                   
+
+                                </ul>
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="btn-update" onClick={update} >Update</button>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+{/* 
+
         <div className="body">
         <div class="d-md-flex p-half">
             
@@ -204,7 +327,6 @@ export   const RegisterEditPage = () => {
                                          { (!password || password.length<8) &&  <p className="validation"> {checkpassword}</p>}
                                         </div>
                                         <div class="p-form-group last mb-3">
-                                            {/* <input type="text" name="country code" class="p-form-control1" value="+91" size="8" /> */}
                                             <span className="mbl">+91</span>
                                             <input type="text" name="phone" placeholder="Mobile Number" class="p-form-control1" size="37"
                                                 value={phone}
@@ -248,6 +370,7 @@ export   const RegisterEditPage = () => {
             </div>
 
         </div>
-        </div>
+        </div> */}
+        </>
     )
    }

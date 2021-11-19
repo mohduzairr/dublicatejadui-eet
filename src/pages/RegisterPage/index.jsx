@@ -7,6 +7,8 @@ import properties from '../../properties'
 
 import axios from 'axios';
 import { useHistory } from 'react-router';
+import Header from 'comman/components/Header';
+import { SubHeader } from 'comman/components/SubHeader';
 
 
 
@@ -86,6 +88,8 @@ export   const RegisterPage = () => {
         
     return (
         <div className="body">
+            <Header/>
+            <SubHeader/>
         <div class="d-md-flex p-half">
             <div class="p-bg" style={{ backgroundImage: "url(" + Background + ")" }}></div>
             <div class="p-contents">

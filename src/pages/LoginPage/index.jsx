@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 
 
 import AuthService from "api/AuthService";
+import Header from "comman/components/Header";
+import { SubHeader } from "comman/components/SubHeader";
 
 function Login() {
   const [email, setEmail] = useState();
@@ -90,6 +92,7 @@ function Login() {
 
   return (
     <div class="d-md-flex p-half">
+     
       <div
         class="p-bg"
         style={{ backgroundImage: "url(" + Background + ")" }}
@@ -97,8 +100,11 @@ function Login() {
       <div class="p-contents">
         <div class="p-containers">
           <div class="row align-items-center justify-content-center">
+            
             <div class="col-md-12">
+              
               <div class="form-block mx-auto">
+                
                 <div class="p-mb-12 ">Login</div>
 
                 <form onSubmit={submit}>

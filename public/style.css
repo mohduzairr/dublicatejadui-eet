@@ -3981,3 +3981,19 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+.update_input{
+  border-style: none;
+}
+
+.btn-update{
+    color:white;
+    background-color: var(--tertiary);
+    margin-left: 40%;
+    height: 50px;
+    width: 200px;
+    border-radius: 8px;
+    margin-top: -100px;
+    border-style: none;
+
+}
