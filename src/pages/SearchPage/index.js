@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import CardList from "../CardList";
 import properties from '../../properties'
-import { SearchBuyProperties } from "../../SearchBuyProperties";
-import { BudgetSearch } from "../../BudgetSearch";
+import { SearchBuyProperties } from "./components/SearchBuyProperties";
+import { BudgetSearch } from "./components/BudgetSearch";
 
 
 

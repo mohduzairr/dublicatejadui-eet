@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Contact from "./pages/Contact"
+// import Contact from "./pages/undefinedPages/Contact"
 import { RegisterPage } from './pages/RegisterPage';
-import { PageOnWorking } from 'pages/PageOnWorking';
-import { DashBoard } from 'pages/DashBoard';
-import { HelpCenter } from 'pages/HelpCenter';
+import { PageOnWorking } from 'pages/undefinedPages/PageOnWorking';
+import { DashBoard } from 'pages/undefinedPages/DashBoard';
+import { HelpCenter } from 'pages/undefinedPages/HelpCenter';
 import PostPropertyPage from 'pages/PostPropertyPage';
 import Header from 'comman/components/Header';
 import HomePage from 'pages/HomePage';
@@ -13,6 +13,7 @@ import PropertyListPage from 'pages/PropertyListPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import Login from 'pages/LoginPage';
 import { RegisterEditPage } from 'pages/RegisterEditPage';
+import Contact from 'pages/undefinedPages/Contact';
 
 
 const Routes=()=> {
@@ -32,7 +33,7 @@ const Routes=()=> {
                     </Route>
                    
                     <Route path="/contact" exact>
-                        <Contact />
+                        <Contact/>
                     </Route>
                     
                     <Route path="/propertylist"   exact>
