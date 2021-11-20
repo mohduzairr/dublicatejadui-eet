@@ -15,7 +15,7 @@ import { ProfileHeader } from 'pages/ProfilePage/components/ProfileHeader';
 
 
 
-export   const RegisterEditPage = () => {
+export   const ProfileEditpage = () => {
    const user = useSelector(state => state.user)
   const dispatch = useDispatch();
 
@@ -173,7 +173,7 @@ export   const RegisterEditPage = () => {
                             <div class="card-header infotab91-2">
                                 <ul>
                                     <li>
-                                <input style={{borderBlockStyle:"none"}} type="text" class="p-form-control" placeholder="Name" id="name"
+                                <input style={{borderStyle:"none"}} type="text" class="p-form-control" placeholder="Name" id="name"
                                      name={name}
                                       value={name}
                                       onChange={(e) => setName(e.target.value)}
@@ -181,12 +181,12 @@ export   const RegisterEditPage = () => {
                                   />
                                   </li>
                                     <li>
-                                    <input style={{borderBlockStyle:"none"}} type="text" class="p-form-control" placeholder="Email" id="email"
+                                    <input style={{borderStyle:"none"}} type="text" class="p-form-control" placeholder="Email" id="email"
                                      value={email}
                                       onChange={(e) => setEmail(e.target.value)}/>
                                      </li>
                                     <li>
-                                    <input style={{borderBlockStyle:"none"}} type="text" class="p-form-control" placeholder="Username" id="username"
+                                    <input style={{borderStyle:"none"}} type="text" class="p-form-control" placeholder="Username" id="username"
                                        value={userName}
                                        onChange={(e) => setUsername(e.target.value)} />
                                     </li>
@@ -194,13 +194,13 @@ export   const RegisterEditPage = () => {
 
                                     <li>
                                     <span className="mbl" style={{fontSize: 15}}>+91</span>
-                                     <input style={{borderBlockStyle:"none"}} type="text" name="phone" placeholder="Mobile Number" class="p-form-control1" size="37"
+                                     <input style={{borderStyle:"none"}} type="text" name="phone" placeholder="Mobile Number" class="p-form-control1" size="37"
                                        value={phone}
                                          onChange={(e) => setPhone(e.target.value)}
                                            />
                                   </li>
                                   <li>
-                                  <input style={{borderBlockStyle:"none"}} type="password" class="p-form-control" placeholder="Password" id="password"
+                                  <input style={{borderStyle:"none"}} type="password" class="p-form-control" placeholder="Password" id="password"
                                      value={password}
                                      onChange={(e) => setPassword(e.target.value)}
 

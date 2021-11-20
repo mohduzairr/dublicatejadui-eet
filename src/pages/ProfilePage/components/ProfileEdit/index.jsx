@@ -6,7 +6,7 @@ export const ProfileEdit = () => {
     const user = useSelector(state => state.user)
     const history=useHistory()
     const login_Details=()=>{
-    history.push('/registereditpage')
+    history.push('/profileeditpage')
     }
     return (
         <>

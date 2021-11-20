@@ -12,8 +12,8 @@ import { FlatDetails } from 'pages/FlatDetailsPage';
 import PropertyListPage from 'pages/PropertyListPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import Login from 'pages/LoginPage';
-import { RegisterEditPage } from 'pages/RegisterEditPage';
 import Contact from 'pages/undefinedPages/Contact';
+import { ProfileEditpage } from 'pages/ProfileEditpage';
 
 
 const Routes=()=> {
@@ -76,8 +76,8 @@ const Routes=()=> {
                         
                     </Route>
 
-                    <Route path="/registereditpage"   exact>
-                        <RegisterEditPage/>
+                    <Route path="/profileeditpage"   exact>
+                        <ProfileEditpage/>
                         
                     </Route>
                    
