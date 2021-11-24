@@ -8,7 +8,7 @@ import { Cities } from './components/Cities';
 
 
 function Header({ setCity,setLocation}) {
-    const  property = useSelector(state => state. property)
+    const  property = useSelector(state => state.property)
 //    const location=useLocation();
    const [citydata,setCityData]= useState([]);
 //    const [cityheads,setCityHeads]= useState("");

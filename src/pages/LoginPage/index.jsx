@@ -73,6 +73,7 @@ function Login() {
               state:response.state,
               user_name:response.user_name,
               role_id:response.role_id,
+              password:response.password,
           }
       });
 

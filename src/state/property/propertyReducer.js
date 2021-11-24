@@ -3,7 +3,7 @@ const initialState = {
     selectedCity:"Delhi",
     selectedLocation:""
 }
-
+console.log("llllllll"+initialState.selectedCity)
 const propertyReducer = ( state = initialState, action)  => {
 
     switch (action.type) {
