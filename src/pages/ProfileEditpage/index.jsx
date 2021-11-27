@@ -18,16 +18,19 @@ export   const ProfileEditpage = () => {
    const user = useSelector(state => state.user)
   const dispatch = useDispatch();
     const [passwordShown, setPasswordShown] = useState(false);
-
     const [email, setEmail] = useState(user?.data?.email);
     const [emailcheck,setEmailcheck]=useState();
-    const [password, setPassword] = useState(user?.data?.password);
+    const [password, setPassword] = useState();
+    const [password_confirmation, setPassword_Confirmation] = useState();
+    const [confirmpasswordShown, setConfirmPasswordShown] = useState(false);
+
     const [checkpassword,setCheckpassword] = useState();
     const [name, setName] = useState(user?.data?.name);
     const [checkname,setCheckname]=useState();
     const [phone, setPhone] = useState(user?.data?.phone);
     const [checkphone ,setcheckphone]=useState();
     const [userName, setUsername] = useState(user?.data?.user_name)
+    const [state, setState] = useState(user?.data?.state)
     const [checkusername,setCheckUsername]= useState();
     const [allentry, setAllentry] = useState([]);
     const [radio, setRadio] = useState(user?.data?.role_id);
@@ -58,9 +61,9 @@ export   const ProfileEditpage = () => {
             }
         });
   
+    
 
-
-        const newEntry = { email: email, password: password, name: name, userName: userName, phone: phone, role: radio};
+        const newEntry = { email: email, password: password,password_confirmation:password_confirmation, name: name, userName: userName, phone: phone, role: radio,state:state};
         setAllentry([...allentry, newEntry]);
         signup(newEntry);
 
@@ -118,6 +121,11 @@ export   const ProfileEditpage = () => {
     setPasswordShown(!passwordShown);
   };
 
+  const confirmTogglePassword = () => {
+    // When the handler is invoked
+    // inverse the boolean state of passwordShown
+    setConfirmPasswordShown(!confirmpasswordShown);
+  };
 
     return (
         <>
@@ -172,8 +180,11 @@ export   const ProfileEditpage = () => {
                                 <li>Name:</li>
                                 <li>Email:</li>
                                 <li>User name:</li>
+                                <li>State:</li>
                                 <li>Mobile:</li>
                                 <li>Password:</li>
+                                <li>Confirm Password:</li>
+
 
                             </ul>
                         </div>
@@ -199,6 +210,12 @@ export   const ProfileEditpage = () => {
                                        onChange={(e) => setUsername(e.target.value)} />
                                     </li>
 
+                                    <li>
+                                    <input style={{borderStyle:"none"}} type="text" class="p-form-control" placeholder="State" id="username"
+                                       value={state}
+                                       onChange={(e) => setState(e.target.value)} />
+                                    </li>
+
 
                                     <li>
                                     <span className="mbl" style={{fontSize: 15}}>+91</span>
@@ -206,13 +223,21 @@ export   const ProfileEditpage = () => {
                                        value={phone}
                                          onChange={(e) => setPhone(e.target.value)}
                                            />
-                                  </li>
+                                    </li>
                                   <li>
                                   <input style={{borderStyle:"none"}} type={passwordShown ? "text" : "password"} class="p-form-control" placeholder="Password" id="password"
                                      value={password}
                                      onChange={(e) => setPassword(e.target.value)}
                                      />
                                       <i class="far fa-eye" id="togglePassword"  onClick={togglePassword}  style={{ fontSize: 15}} ></i>
+                                  </li>
+
+                                  <li>
+                                  <input style={{borderStyle:"none"}} type={confirmpasswordShown ? "text" : "password"} class="p-form-control" placeholder="confirm Password" id="password"
+                                     value={password_confirmation}
+                                     onChange={(e) => setPassword_Confirmation(e.target.value)}
+                                     />
+                                      <i class="far fa-eye" id="confirmTogglePassword"  onClick={confirmTogglePassword}  style={{ fontSize: 15}} ></i>
                                   </li>
 
                                  

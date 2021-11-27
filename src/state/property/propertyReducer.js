@@ -1,6 +1,8 @@
 const initialState = {
     properties:[],
-    selectedCity:"Delhi",
+    selectedCity:{
+        city:"Delhi"
+    },
     selectedLocation:""
 }
 console.log("llllllll"+initialState.selectedCity)
