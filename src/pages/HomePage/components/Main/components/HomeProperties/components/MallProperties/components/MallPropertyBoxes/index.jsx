@@ -25,7 +25,7 @@ const MallPropertyBoxes = (props) => {
 
                         <div className="card--content1">
                             <div className="card__text2">
-                                <span className="view2">View<i className="bi bi-arrow-right-short"></i></span>
+                                {/* <span className="view2">View<i className="bi bi-arrow-right-short"></i></span> */}
                             </div>
                         </div>
                     </a>

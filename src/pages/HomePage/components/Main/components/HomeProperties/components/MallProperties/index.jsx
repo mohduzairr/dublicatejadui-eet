@@ -20,8 +20,9 @@ import MallPropertyBoxes from './components/MallPropertyBoxes';
    }
     return (
         <>
-            <div className="text20"> <h2 >{title}
-            </h2><a href="#" ><span className="view1">View all</span></a></div>
+            <div className="text20"> <h2 >{title}</h2>
+            {/* <a href="#" ><span className="view1">View all</span></a> */}
+            </div>
             <div className="container1">
 
             {    

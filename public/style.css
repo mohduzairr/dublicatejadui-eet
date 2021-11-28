@@ -742,7 +742,7 @@
   }
   
   .dropdown-menu .mb-login__drop-links {
-    padding: 20px 0;
+    /* padding: 20px 0; */
   }
   .dropdown-menu .mb-login__drop-links > li > a {
     display: block;

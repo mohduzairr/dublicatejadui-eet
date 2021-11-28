@@ -41,10 +41,6 @@ function PublicProperties({title}) {
                   })
               }        
                    
-                    {/* <PropertyBox link="index.html" image="images/bg_1.jpeg" title="Porpetry2" />
-                    <PropertyBox link="index.html" image="images/bg_1.jpeg" title="Porpety3" />
-                    <PropertyBox link="index.html" image="images/bg_1.jpeg" title="Porpety3" /> */}
-
                     
                    </div>
         </>

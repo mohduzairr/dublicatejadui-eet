@@ -36,6 +36,8 @@ export   const ProfileEditpage = () => {
     const [radio, setRadio] = useState(user?.data?.role_id);
     const [checkradio,setCheckRadio] = useState();
     const [message, setMessage] = useState("");
+    const [samepassword,  setSamePassword] = useState("");
+
     
     
     const  history=useHistory();
@@ -70,13 +72,10 @@ export   const ProfileEditpage = () => {
     }
 
     const validateInputs=()=>{
-        if (!radio) {
-            setCheckRadio('please select personal details')
-            return false;
-        } else  if (!name || name.lenghth<=3){
+        if  (!name || name.lenghth<=3){
             setCheckname("name should be 3 alpahabets");
             return false;
-        }else if( !email ||  email.length <=10){
+        } else if( !email ||  email.length <=10){
             setEmailcheck("invalid email");
             return false;
             
@@ -92,7 +91,11 @@ export   const ProfileEditpage = () => {
           setcheckphone("number should be 10 digits")
           return false;
 
-        }
+        }else if(password==password_confirmation){
+            setSamePassword("number should be 10 digits")
+            return false;
+  
+          }
         return true;
     }
    
@@ -105,12 +108,14 @@ export   const ProfileEditpage = () => {
            
    
             const rest = await axios.post(properties.update_url,newEntry,config );
-            setMessage(rest.data);
+            // setMessage(rest.data);
+            // setMessage(rest.data.message);
+
             setEmail('');
             setPassword('');
             setName('');
             setPhone('');
-            alert("profife updated succecfuly")
+            alert("profile updated succecfuly")
             history.push('./login')
         }
  }
@@ -240,9 +245,9 @@ export   const ProfileEditpage = () => {
                                       <i class="far fa-eye" id="confirmTogglePassword"  onClick={confirmTogglePassword}  style={{ fontSize: 15}} ></i>
                                   </li>
 
-                                 
+                                <p>{samepassword}</p>
 
-                                  {/* <button onClick={togglePassword}>Show Password</button> */}
+                                {/* <button onClick={togglePassword}>Show Password</button> */}
 
 
                                    

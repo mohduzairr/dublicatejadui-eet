@@ -45,7 +45,7 @@ import CommercePropertyBox from './components/CommercePropertyBox';
 
       <div className="text20">
          <h2 >{title} </h2>
-       <a href="#" ><span className="view1">View all</span></a>
+       {/* <a href="#" ><span className="view1">View all</span></a> */}
         </div>
 
 <div class="container4 desk">

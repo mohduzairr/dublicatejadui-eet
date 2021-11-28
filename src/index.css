@@ -704,9 +704,7 @@ background-color: var(--secondary);}
   position: relative;
 }
 
-.dropdown-menu .mb-login__drop-links {
-padding: 20px 0;
-}
+
 .dropdown-menu .mb-login__drop-links>li>a {
 display: block;
 font-size: 14px;

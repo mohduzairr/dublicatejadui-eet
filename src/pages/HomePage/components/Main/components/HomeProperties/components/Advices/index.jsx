@@ -7,7 +7,9 @@ import { AdvicesBox } from './components/AdvicesBox'
     return (
         <>
             <div className="text20"> <h2 >Tools & Advice
-            </h2><a href="#" ><span className="view1">View all</span></a></div>
+            </h2>
+            {/* <a href="#" ><span className="view1">View all</span></a> */}
+            </div>
             <div className="container">
             <div className="container1">
 
