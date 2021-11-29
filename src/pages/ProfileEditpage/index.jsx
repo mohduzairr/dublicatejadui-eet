@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Header from 'comman/components/Header';
 import { SubHeader } from 'comman/components/SubHeader';
 import { ProfileHeader } from 'pages/ProfilePage/components/ProfileHeader';
+import { red } from '@material-ui/core/colors';
 
 
 
@@ -46,31 +47,6 @@ export   const ProfileEditpage = () => {
         history.push('/login');
     }
 
-
-
-    const update = (e) => {
-        e.preventDefault();
-
-        dispatch({
-            type:"ADD_USER",
-            payload:{
-                name:{name},
-                email:{email},
-                phone:{phone},
-                userName:{userName},
-                radio:{radio},
-                password:{password}
-            }
-        });
-  
-    
-
-        const newEntry = { email: email, password: password,password_confirmation:password_confirmation, name: name, userName: userName, phone: phone, role: radio,state:state};
-        setAllentry([...allentry, newEntry]);
-        signup(newEntry);
-
-    }
-
     const validateInputs=()=>{
         if  (!name || name.lenghth<=3){
             setCheckname("name should be 3 alpahabets");
@@ -91,16 +67,24 @@ export   const ProfileEditpage = () => {
           setcheckphone("number should be 10 digits")
           return false;
 
-        }else if(password==password_confirmation){
-            setSamePassword("number should be 10 digits")
+        }else if(password!==password_confirmation){
+            setSamePassword("password not match")
             return false;
   
           }
         return true;
     }
-   
-    async function signup(newEntry) {
-        if(/*validateInputs()*/ true){
+
+    const update = (e) => {
+        e.preventDefault();
+
+        const newEntry = { email: email, password: password,password_confirmation:password_confirmation, name: name, userName: userName, phone: phone, role: radio,state:state};
+        setAllentry([...allentry, newEntry]);
+        signup(newEntry);
+        
+
+      async function signup(newEntry) {
+        if(validateInputs()){
             const config = {
                 headers: { Authorization: `Bearer ${user?.data?.token}`}
               };
@@ -110,6 +94,17 @@ export   const ProfileEditpage = () => {
             const rest = await axios.post(properties.update_url,newEntry,config );
             // setMessage(rest.data);
             // setMessage(rest.data.message);
+            dispatch({
+                type:"ADD_USER",
+                payload:{
+                    name:{name},
+                    email:{email},
+                    phone:{phone},
+                    userName:{userName},
+                    radio:{radio},
+                    password:{password}
+                }
+            });
 
             setEmail('');
             setPassword('');
@@ -119,6 +114,12 @@ export   const ProfileEditpage = () => {
             history.push('./login')
         }
  }
+
+  
+    }
+
+   
+   
         
  const togglePassword = () => {
     // When the handler is invoked
@@ -201,9 +202,7 @@ export   const ProfileEditpage = () => {
                                      name={name}
                                       value={name}
                                       onChange={(e) => setName(e.target.value)}
-
                                   />
-                                  <p> {checkname}</p>
                                   </li>
                                     <li>
                                     <input style={{borderStyle:"none"}} type="text" class="p-form-control" placeholder="Email" id="email"
@@ -244,11 +243,9 @@ export   const ProfileEditpage = () => {
                                      onChange={(e) => setPassword_Confirmation(e.target.value)}
                                      />
                                       <i class="far fa-eye" id="confirmTogglePassword"  onClick={confirmTogglePassword}  style={{ fontSize: 15}} ></i>
+                                    {  password!==password_confirmation &&   <p style={{color:"red"}}>{samepassword}</p>}
                                   </li>
 
-                                <p>{samepassword}</p>
-
-                                {/* <button onClick={togglePassword}>Show Password</button> */}
 
 
                                    
@@ -263,7 +260,7 @@ export   const ProfileEditpage = () => {
                 </div>
 
             </div>
-            <button class="btn-update" onClick={update} >Update</button>
+            <button type="button" class="btn-update" onClick={update} >Update</button>
         </div>
         </>
     )
