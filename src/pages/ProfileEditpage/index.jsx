@@ -24,7 +24,6 @@ export   const ProfileEditpage = () => {
     const [password, setPassword] = useState();
     const [password_confirmation, setPassword_Confirmation] = useState();
     const [confirmpasswordShown, setConfirmPasswordShown] = useState(false);
-
     const [checkpassword,setCheckpassword] = useState();
     const [name, setName] = useState(user?.data?.name);
     const [checkname,setCheckname]=useState();
@@ -92,8 +91,7 @@ export   const ProfileEditpage = () => {
            
    
             const rest = await axios.post(properties.update_url,newEntry,config );
-            // setMessage(rest.data);
-            // setMessage(rest.data.message);
+           
             dispatch({
                 type:"ADD_USER",
                 payload:{

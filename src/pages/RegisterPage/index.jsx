@@ -15,6 +15,8 @@ import { SubHeader } from 'comman/components/SubHeader';
 
 export   const RegisterPage = () => {
 
+    const [checkebox, setCheckeBox] = useState(true);
+    const [checkeboxmessage, setCheckeBoxMessage] = useState(true);
 
     const [email, setEmail] = useState();
     const [emailcheck,setEmailcheck]=useState();
@@ -68,7 +70,11 @@ export   const RegisterPage = () => {
           setcheckphone("number should be 10 digits")
           return false;
 
-        }
+        }else if(checkebox==false){
+            setCheckeBoxMessage("please fill the checkbox")
+            return false;
+  
+          }
         return true;
     }
 
@@ -194,10 +200,13 @@ export   const RegisterPage = () => {
                                     <div class="d-flex p-mb-5 align-items-center" style={{ fontSize: "x-small" }}>
 
                                         <label>
-                                            <input type="checkbox" checked="checked" name="remember" /> I agree to PropNex T&C, Privacy Policy, & Cookie Policy
+                                            <input type="checkbox" defaultChecked={checkebox} onChange={() => setCheckeBox(!checkebox)} /> I agree to PropNex T&C, Privacy Policy, & Cookie Policy
+                                            { checkebox==false && <p className="validation" >{checkeboxmessage}</p>}
 
-                                        </label>
+                                        </label><br/><br/>
+
                                     </div>
+
 
                                     <div class="p-SignUp1">
                                         <input type="submit" value="Sign Up" class="btn btn-block btn-danger"   />
