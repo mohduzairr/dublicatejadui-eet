@@ -347,7 +347,7 @@ const agent = ()=>{
                         </div>
                     </div>
                 </div>
-                <div class="comp1">
+                {/* <div class="comp1">
                     <div class="col-xs-8">
                         <div class="input-group">
                             <div class="input-group-btn search-panel">
@@ -364,7 +364,7 @@ const agent = ()=>{
 
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
         

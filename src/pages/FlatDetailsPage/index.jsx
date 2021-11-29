@@ -1,17 +1,7 @@
 import{ React,useState, useEffect} from 'react'
-
-// import { FlatAgent } from 'pages/FlatAgent'
-// import { FlatDescription } from 'pages/FlatDescription'
-// import { FlatDetailsSlider } from 'pages/FlatDetailsSlider'
-// import { FlatPrice } from 'pages/FlatPrice'
 import properties from '../../properties'
-// import { FlatSize } from 'pages/FlatSize'
-// import { Footer } from 'pages/HomePage/components/Footer'
-// import Header from 'pages/HomePage/components/Header'
-// import { PropertyDeatailsBox } from 'pages/PropertyDetailsBox'
 import axios from 'axios';
 import { useLocation } from 'react-router'
-// import { PropertySimilarProject } from 'pages/PropertySimilarproject'
 import Header from 'comman/components/Header'
 import { PropertyDeatailsBox } from './components/PropertyDetailsBox'
 import { FlatAgent } from './components/FlatAgent'
@@ -19,6 +9,7 @@ import { FlatDescription } from './components/FlatDescription';
 import { PropertySimilarProject } from './components/PropertySimilarProject';
 import { FlatDetailsSlider } from './components/FlatDetailsSlider';
 import { Footer } from 'comman/components/Footer';
+import { SubHeader } from 'comman/components/SubHeader';
  
 
 export const FlatDetails = () => {
@@ -45,7 +36,8 @@ export const FlatDetails = () => {
 
     return (
         <>   
-        <Header/><br /><br />
+        <Header/>
+        <SubHeader/>
         <div class="container size">
 
                   { fetchProperties &&   

@@ -100,7 +100,7 @@ export   const ProfileEditpage = () => {
     }
    
     async function signup(newEntry) {
-        if(/*validateInputs*/ true){
+        if(/*validateInputs()*/ true){
             const config = {
                 headers: { Authorization: `Bearer ${user?.data?.token}`}
               };
@@ -203,6 +203,7 @@ export   const ProfileEditpage = () => {
                                       onChange={(e) => setName(e.target.value)}
 
                                   />
+                                  <p> {checkname}</p>
                                   </li>
                                     <li>
                                     <input style={{borderStyle:"none"}} type="text" class="p-form-control" placeholder="Email" id="email"
