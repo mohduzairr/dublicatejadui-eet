@@ -26,14 +26,13 @@ const CardList = (props) => {
               </div>
               <div class="rates">
                 <span class="semi-bold">₹{props.flatprice}</span>
-                <span class="semi-bold2">₹{props.per_square_fit} per-sqr-fit</span>
+                <span class="semi-bold2">₹{props.per_square_fit}/sqr-fit</span>
               </div>
               <div class="contentt">
                 <div class="pcard__heading">
                   <h2>
                     <span class="pcard__title">
-                      <span class="pcard__title1">{props.type}</span>
-                      for Sale in KW Blue Pearl , {props.location}
+                      <span class="pcard__title1">{props.type}</span> for Sale in KW Blue Pearl , {props.location}
                     </span>
                   </h2>
                 </div>
