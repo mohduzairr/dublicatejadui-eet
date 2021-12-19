@@ -284,7 +284,7 @@ function Header({ setCity,setLocation}) {
             </div>
             </div>
             <div className="mb-header__main__postproperty">
-            <a href="#" onClick={postproperty}>Post Property <span className="badge">Free</span></a>
+            <a href="#" onClick={postproperty}>Post Property <span className="badge" style={{backgroundColor:'#ffc72c',fontWeight:'bold',texttransform: 'uppercase'}}>Free</span></a>
             </div>
             </div>
             {/* </div> */}

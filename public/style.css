@@ -1512,6 +1512,8 @@
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 8px;
+    margin-right: 5px;
   }
   .p-py-3 {
     padding-top: 2rem !important;
@@ -4023,4 +4025,8 @@
   margin-right: 12%;
   margin-left: 10%;
   display: flex;
+}
+
+.badge{
+  background-color: #ffc72c;
 }

@@ -2,25 +2,19 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router";
-import properties from '../../properties'
-// import { Footer } from '../HomePage/components/Footer';
-// import Header from 'pages/HomePage/components/Header';
-// import { OwnerDetailspost } from 'OwnerDeatailsPost';
-// import { PropertyFeaturesPost } from './components/PropertyFeaturesPost';
-// import { OwnerDetailspost } from './components/OwnerDetailsPost';
-// import { CommercialShopPost } from './components/CommercialShopPost';
-// import { PropertiesImages } from './components/PropertiesImages';
+import properties from '../../properties';
 import Header from 'comman/components/Header';
 import { OwnerDetailspost } from './components/OwnerDetailsPost';
 import { PropertyFeaturesPost } from './components/PropertyFeaturesPost';
 import { CommercialShopPost } from './components/CommercialShopPost';
 import { PropertiesImages } from './components/PropertiesImages';
 import { Footer } from 'comman/components/Footer';
+import { useSelector } from 'react-redux';
 
  const PostPropertyPage = () => {
 
 
-
+   
     const [role, setRole] = useState("");
     const[checkrole,setCheckrole]=useState('');
     const[name,setName]=useState("");
@@ -45,13 +39,20 @@ import { Footer } from 'comman/components/Footer';
     const [bathroom, setBathroom] = useState()
     const [balcony, setBalcony] = useState(0)
     const [coveredArea,setCoveredArea]=useState();
+    const [checkcoveredarea, setCheckcoveredarea] = useState()
     const [plotBreadth,setPlotBreadth]=useState();
     const [plotArea,setPlotArea]=useState();
     const [plotLength,setPlotLength]=useState();
-
+    const [superarea, setSuperarea] = useState()
+    const [builtuparea, setBuiltuparea] = useState()
     const[checkbedroom,setCheckbedroom]=useState('')
     const [checkbalcony,setCheckbalcony]=useState();
     const[checkbathroom,setCheckbathroom]=useState();
+    const [societyname, setSocietyname] = useState()
+    const [checksocietyname, setCheckSocietyname] = useState()
+    const [landzone, setLandzone] = useState()
+    const [checklandzone, setChecklandzone] = useState()
+    const [carpetarea, setCarpetarea] = useState()
     const [images, setImages] = useState([]);
     const[checkimage,setCheckimage]=useState();
     const [allEntry, setAllentry] = useState([]);
@@ -59,7 +60,8 @@ import { Footer } from 'comman/components/Footer';
     let location1 = useLocation();
     const history = useHistory();
   
-  
+    const user = useSelector(state => state.user)
+
       const post = (e) => {
       e.preventDefault();
     //   const postEntry = { role: role,name:name,phone:phone,email:email, reason: reason, city: city, location: location, propertytype: propertytype, bedroom: bedroom, balcony: balcony, bathroom: bathroom,};
@@ -100,22 +102,32 @@ import { Footer } from 'comman/components/Footer';
         }else if(!city){
             setCheckcity('please select the city')
             return false;
+          }else if(!societyname){
+            setCheckSocietyname('please select the societyname')
+            return false;
         }else if(!location){
             setChecklocation("please select the location");
-            return false;
+            return false; 
+         
+          }else if(!coveredArea){
+            setCheckcoveredarea("please fill the field");
+            return false; 
+           }else if(!landzone){
+              setChecklandzone("please select the feild");
+              return false;
         }else if(!images){
             setCheckimage('please select the image')
         }
         return true;
     }
-  
+    
     const getData = async () => {
-      
         if(/*postField_validation()*/true ){  
            
       const config = {
-        headers: { Authorization: `Bearer ${location1.state.token}`,  ContentType: 'multipart/form-data', enctype: "multipart/form-data" }
+        headers: { Authorization: `Bearer ${user?.data?.token}`,  ContentType: 'multipart/form-data', enctype: "multipart/form-data" }
       };
+
       const data = new FormData() 
       images.forEach(file => data.append('image[]',file));
       //data.append('images', images[0])
@@ -134,7 +146,22 @@ import { Footer } from 'comman/components/Footer';
       data.append('furnished',furnished)
       data.append('persquarefit',persquarefit)
       data.append('flatprice',flatprice)
+      data.append('societyname',societyname)
+      data.append('landzone',landzone)
+      data.append('coveredArea',coveredArea)
+      data.append('plotArea',plotArea)
+      data.append('plotLength',plotLength)
+      data.append('plotBreadth',plotBreadth)
+      data.append('superarea',superarea)
+      data.append('builtuparea',builtuparea)
+      data.append('builtuparea',carpetarea)
 
+
+
+      
+
+
+      
       
       console.log(data);
       const rest = await axios.post(properties.post_properties_url, data, config);
@@ -227,18 +254,18 @@ import { Footer } from 'comman/components/Footer';
         
             <div className="radio1">
               <label>For</label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              <input className="radios" type="radio" name="flexRadioDefaultt" id="flexRadioDefault11"
               
               value="sale"
               onChange={(e)=>setReason(e.target.value)}    />
               <label for="name">Sale </label>
 
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              <input className="radios" type="radio" name="flexRadioDefaultt" id="flexRadioDefault11"
                value="Rent/ Lease"
                onChange={(e)=>setReason(e.target.value)}  />
               <label for="name"> Rent/ Lease</label>
 
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  
+              <input className="radios" type="radio" name="flexRadioDefaultt" id="flexRadioDefault11"  
                value="PG/Hostel"
                onChange={(e)=>setReason(e.target.value)}      />
               <label for="name"> PG/Hostel
@@ -257,7 +284,7 @@ import { Footer } from 'comman/components/Footer';
         
               <select className="drop"
                defaultValue={propertytype}
-               onChange={(e) => setpropertytype(e.target.value)}   >
+               onChange={(e) => setpropertytype(e.target.value)} >
                 <option value="-1">Select Property Type</option>
                 <optgroup label="ALL RESIDENTIAL"></optgroup>
                 <option value="Flat/ Apartment">Flat/ Apartment</option>
@@ -328,39 +355,51 @@ import { Footer } from 'comman/components/Footer';
             </div>
             <div className="form-group first">
               <label className="name1">Name of Project/Society </label>
-              <input type="text" className="form-control" placeholder="Name of Project/Society" id="name3"/>
+              <input type="text" className="form-control" placeholder="Name of Project/Society" id="name3"
+              
+              value={societyname} 
+               onChange={(e) => setSocietyname(e.target.value)}  />
+
+               {!societyname &&  <p>{checksocietyname}</p>}
+              
             </div>
             <div className="form-group first">
               <label className="name1">Land Zone</label>
               <br/>
         
-              <select className="drop name2">
+              <select className="drop name2"
+              defaultValue={landzone}
+              onChange={(e) => setLandzone(e.target.value)}
+              
+              >
                 <option value="">Select Land Zone</option>
         
-                <option value="36100">Industrial</option>
+                <option value="Industrial">Industrial</option>
         
-                <option value="36101">Commercial</option>
+                <option value="Commercial">Commercial</option>
         
-                <option value="36102">Residential</option>
+                <option value="Residential">Residential</option>
         
-                <option value="36108">Transport and Communication</option>
+                <option value="Transport and Communication">Transport and Communication</option>
         
-                <option value="36109">Public Utilities</option>
+                <option value="Public Utilities">Public Utilities</option>
         
-                <option value="36110">Public and Semi Public Use</option>
+                <option value="Public and Semi Public Use">Public and Semi Public Use</option>
         
-                <option value="36111">Open Spaces</option>
+                <option value="Open Spaces">Open Spaces</option>
         
                 <option value="36112">Agricultural Zone</option>
         
-                <option value="36113">Special Economic Zone</option>
+                <option value="Special Economic Zone">Special Economic Zone</option>
         
-                <option value="36114">Natural Conservation Zone</option>
+                <option value="Natural Conservation Zone">Natural Conservation Zone</option>
         
-                <option value="36115">Government Use</option>
+                <option value="Government Use">Government Use</option>
         
         
               </select>
+              {!landzone &&  <p>{checklandzone}</p>}
+
             </div>
             <div className="form-group first">
               <label className="name1">Ideal For Businesses</label>
@@ -370,7 +409,7 @@ import { Footer } from 'comman/components/Footer';
             {/* <div className="heading-1"><b>Property Features </b></div> */}
             <div className="form">
 
-{(propertytype=="Flat/ Apartment" || propertytype=="Residential House" || propertytype=="Villa" || propertytype== "Builder Floor Apartment" || propertytype== "Penthouse") &&
+     {(propertytype=="Flat/ Apartment" || propertytype=="Residential House" || propertytype=="Villa" || propertytype== "Builder Floor Apartment" || propertytype== "Penthouse") &&
            <PropertyFeaturesPost
            bedroom={bedroom}
            setBedroom={setBedroom}
@@ -485,16 +524,17 @@ import { Footer } from 'comman/components/Footer';
                 <br/>
                 <div className="sub-area">
                   <input type="text" className="form-control" placeholder="Covered Area" id="name2"
+                  value={coveredArea}
                   onChange={(e)=>setCoveredArea(e.target.value)}
                   
                   />
         
                   <select className="drop1"
-                   onChange={(e)=>setCoveredArea(e.target.value)}
+                  //  onChange={(e)=>setCoveredArea(e.target.value)}
 
                   >
                     <option value="Sq-ft">Sq-ft</option>
-                    <option value="Sq-ft">Sq-ft</option>
+                    {/* <option value="Sq-ft">Sq-ft</option>
                     <option value="Sq-yrd">Sq-yrd</option>
                     <option value="Sq-m">Sq-m</option>
                     <option value="Acre">Acre</option>
@@ -513,12 +553,10 @@ import { Footer } from 'comman/components/Footer';
                     <option value="Cent">Cent</option>
                     <option value="Perch">Perch</option>
                     <option value="Guntha">Guntha</option>
-                    <option value="Are">Are</option>
-        
-        
-        
-        
+                    <option value="Are">Are</option> */}
                   </select>
+                  {!coveredArea &&  <p>{checkcoveredarea}</p>}
+
                 </div>
               </div>
               <div className="form-group first">
@@ -526,15 +564,16 @@ import { Footer } from 'comman/components/Footer';
                 <br/>
                 <div className="sub-area">
                   <input type="text" className="form-control" placeholder="Plot Area" id="name2"
+                  value={plotArea}
                   onChange={(e)=>setPlotArea(e.target.value)}
                   />
         
                   <select className="drop1"
-                  onChange={(e)=>setPlotArea(e.target.value)}
+                  // onChange={(e)=>setPlotArea(e.target.value)}
 
                   >
                     <option value="-1">Sq-ft</option>
-                    <option value="-1">Sq-ft</option>
+                    {/* <option value="-1">Sq-ft</option>
                     <option value="">Sq-ft</option>
                     <option value="">Sq-yrd</option>
                     <option value="">Sq-m</option>
@@ -554,7 +593,7 @@ import { Footer } from 'comman/components/Footer';
                     <option value="">Cent</option>
                     <option value="">Perch</option>
                     <option value="">Guntha</option>
-                    <option value="">Are</option>
+                    <option value="">Are</option> */}
                   </select>
                 </div>
               </div>
@@ -563,6 +602,7 @@ import { Footer } from 'comman/components/Footer';
                 <br/>
                 <div className="sub-area">
                   <input type="text" className="form-control" placeholder="Plot Length" id="name2"
+                  value={plotLength}
                   onChange={(e)=>setPlotLength(e.target.value)}
                   />
         
@@ -576,6 +616,7 @@ import { Footer } from 'comman/components/Footer';
                 <br/>
                 <div className="sub-area">
                   <input type="text" className="form-control" placeholder="Plot Breadth" id="name2"
+                  value={plotBreadth}
                   onChange={(e)=>setPlotBreadth(e.target.value)}
                   />
         
@@ -593,11 +634,15 @@ import { Footer } from 'comman/components/Footer';
                 <label className="name1">Super Area </label>
                 <br/>
                 <div className="sub-area">
-                  <input type="text" className="form-control" placeholder="Super Area" id="name2"/>
+                  <input type="text" className="form-control" placeholder="Super Area" id="name2"
+                   value={superarea}
+                   onChange={(e)=>setSuperarea(e.target.value)}
+                  
+                  />
         
                   <select className="drop1">
                     <option value="-1">Sq-ft</option>
-                    <option value="">Sq-ft</option>
+                    {/* <option value="">Sq-ft</option>
                     <option value="">Sq-yrd</option>
                     <option value="">Sq-m</option>
                     <option value="">Acre</option>
@@ -616,7 +661,7 @@ import { Footer } from 'comman/components/Footer';
                     <option value="">Cent</option>
                     <option value="">Perch</option>
                     <option value="">Guntha</option>
-                    <option value="">Are</option>
+                    <option value="">Are</option> */}
                   </select>
                 </div>
               </div>
@@ -624,11 +669,15 @@ import { Footer } from 'comman/components/Footer';
                 <label className="name1">Built-up Area </label>
                 <br/>
                 <div className="sub-area">
-                  <input type="text" className="form-control" placeholder="Super Area" id="name2"/>
+                  <input type="text" className="form-control" placeholder="Super Area" id="name2"
+                   value={builtuparea}
+                   onChange={(e)=>setBuiltuparea(e.target.value)}
+                  
+                  />
         
                   <select className="drop1">
                     <option value="-1">Sq-ft</option>
-                    <option value="">Sq-ft</option>
+                    {/* <option value="">Sq-ft</option>
                     <option value="">Sq-yrd</option>
                     <option value="">Sq-m</option>
                     <option value="">Acre</option>
@@ -647,7 +696,7 @@ import { Footer } from 'comman/components/Footer';
                     <option value="">Cent</option>
                     <option value="">Perch</option>
                     <option value="">Guntha</option>
-                    <option value="">Are</option>
+                    <option value="">Are</option> */}
                   </select>
                 </div>
               </div>
@@ -655,11 +704,15 @@ import { Footer } from 'comman/components/Footer';
                 <label className="name1">Carpet Area </label>
                 <br/>
                 <div className="sub-area">
-                  <input type="text" className="form-control" placeholder="Super Area" id="name2"/>
+                  <input type="text" className="form-control" placeholder="Carpet area" id="name2"
+                  
+                  value={carpetarea}
+                  onChange={(e)=>setCarpetarea(e.target.value)}
+                  />
         
                   <select className="drop1">
                     <option value="-1">Sq-ft</option>
-                    <option value="">Sq-ft</option>
+                    {/* <option value="">Sq-ft</option>
                     <option value="">Sq-yrd</option>
                     <option value="">Sq-m</option>
                     <option value="">Acre</option>
@@ -678,7 +731,7 @@ import { Footer } from 'comman/components/Footer';
                     <option value="">Cent</option>
                     <option value="">Perch</option>
                     <option value="">Guntha</option>
-                    <option value="">Are</option>
+                    <option value="">Are</option> */}
                   </select>
                 </div>
               </div>
