@@ -1151,8 +1151,9 @@ import { useSelector } from 'react-redux';
                 land  even commercial property fast and immediately.</span>
             </div>
           </form>
-          <Footer/>
           </div>
+          <Footer/>
+
           </>
            )
            }

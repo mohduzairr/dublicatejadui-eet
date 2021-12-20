@@ -27,7 +27,7 @@ import CardList from './components/CardList/indes';
      }, [location.state]);
 
     async function getData() {
-        const fetchData={city:property?.selectedCity?.city,flat:location.state.flat,reason:location.state.reason,maxbudget:location.state.maxbudget,minbudget:location.state.minbudget,location:property?.selectedLocation?.area,onebedroom:location.state.onebedroom,twobedroom:location.state.twobedroom,threebedroom:location.state.threebedroom,owner:location.state.rent,agent:location.state.agent}
+        const fetchData={city:property?.selectedCity?.city,flat:location.state?.flat,reason:location.state?.reason,maxbudget:location.state?.maxbudget,minbudget:location.state?.minbudget,location:property?.selectedLocation?.area,onebedroom:location.state?.onebedroom,twobedroom:location.state?.twobedroom,threebedroom:location.state?.threebedroom,owner:location.state?.rent,agent:location.state?.agent}
         console.log("dikha do be pagal"+fetchData);
         const propertiesResult = await axios.get(properties.search_url, { params: fetchData });
         console.log(propertiesResult);
@@ -80,7 +80,8 @@ import CardList from './components/CardList/indes';
                                 images={property.property_images}
                                 reason={property.reason}
                                 type={property.type}
-                               
+                                superarea_length={property.superarea_length}
+                                Possession_Status={property.Possession_Status}
                                 />
              
                         )})

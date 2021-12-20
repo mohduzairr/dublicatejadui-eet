@@ -223,7 +223,7 @@ export const PropertyDeatailsBox = (props) => {
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Project</div>
-                                    <div class="col-value">Planner N Maker Homes </div>
+                                    <div class="col-value">{props.project_society_name}</div>
                                 </div>
 
 

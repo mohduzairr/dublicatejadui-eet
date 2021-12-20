@@ -48,9 +48,9 @@ const CardList = (props) => {
                 <div class="commercial">
                   <div class="truncate">
                     <div class="pcard__stitle">
-                      Super Area: <b>37sqft</b>
+                      Super Area: <b>{props.superarea_length}</b>
                     </div>
-                    <div class="pcard__summary">Ready to Move</div>
+                    <div class="pcard__summary">{props.Possession_Status}</div>
                     <div class="pcard__summary">{props.furnish_status}</div>
                   </div>
 

@@ -60,6 +60,7 @@ export const FlatDetails = () => {
                     transaction_type={fetchProperties.transaction_type}
                     Possession_Status={fetchProperties.Possession_Status}
                     covered_carparking={fetchProperties.covered_carparking}
+                    project_society_name={fetchProperties.project_society_name}
 
 
 
@@ -73,8 +74,9 @@ export const FlatDetails = () => {
             <FlatDescription/>
             <PropertySimilarProject/>
             <FlatDetailsSlider/>
-            <Footer/>
             </div>
+            <Footer/>
+
         </>
     )
 }
