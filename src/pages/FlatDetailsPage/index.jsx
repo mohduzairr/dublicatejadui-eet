@@ -55,7 +55,17 @@ export const FlatDetails = () => {
                     balcony={fetchProperties.balcony}
                     phone={fetchProperties.phone}  
                     type={fetchProperties.type}
+                    superarea_length={fetchProperties.superarea_length}
+                    carpet_area={fetchProperties.carpet_area}
+                    transaction_type={fetchProperties.transaction_type}
+                    Possession_Status={fetchProperties.Possession_Status}
+                    covered_carparking={fetchProperties.covered_carparking}
 
+
+
+
+
+                    
                     />
                 }      
             

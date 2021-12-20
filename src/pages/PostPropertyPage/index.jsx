@@ -53,6 +53,11 @@ import { useSelector } from 'react-redux';
     const [landzone, setLandzone] = useState()
     const [checklandzone, setChecklandzone] = useState()
     const [carpetarea, setCarpetarea] = useState()
+    const [opencarparking, setsetOpencarparking] = useState()
+    const [coveredcarparking, setCoveredcarparking] = useState()
+    const [transactiontype, setTransactiontype] = useState()
+    const [possessionstatus,setPossessionStatus] = useState()
+    const [constructionage, setConstructionage] = useState()
     const [images, setImages] = useState([]);
     const[checkimage,setCheckimage]=useState();
     const [allEntry, setAllentry] = useState([]);
@@ -154,10 +159,20 @@ import { useSelector } from 'react-redux';
       data.append('plotBreadth',plotBreadth)
       data.append('superarea',superarea)
       data.append('builtuparea',builtuparea)
-      data.append('builtuparea',carpetarea)
+      data.append('carpetarea',carpetarea)
+      data.append('transactiontype',transactiontype)
+      data.append('possessionstatus',possessionstatus)
+      data.append('constructionage',constructionage)
+      data.append('opencarparking',opencarparking)
+      data.append('coveredcarparking',coveredcarparking)
 
 
 
+
+
+      
+      
+      
       
 
 
@@ -758,16 +773,43 @@ import { useSelector } from 'react-redux';
         
             <div className="radio1 name2">
               <label>Transaction Type </label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              value="New Property"
+               onChange={(e) => {
+                console.log(e.currentTarget.value)
+                setTransactiontype(e.currentTarget.value);
+                 }}
+              />
               <label for="name"> New Property </label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+               value="Resale"
+               onChange={(e) => {
+                console.log(e.currentTarget.value)
+                setTransactiontype(e.currentTarget.value);
+                 }}
+              />
               <label for="name"> Resale </label>
             </div>
             <div className="radio1 name2">
               <label>Possession Status</label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                value="Under Construction"
+                onChange={(e) => {
+                 console.log(e.currentTarget.value)
+                 setPossessionStatus(e.currentTarget.value);
+                  }}
+              
+              />
               <label for="name"> Under Construction</label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                value="Ready to Move"
+                onChange={(e) => {
+                 console.log(e.currentTarget.value)
+                 setPossessionStatus (e.currentTarget.value);
+                  }}
+
+
+              />
               <label for="name"> Ready to Move </label>
         
             </div>
@@ -826,14 +868,18 @@ import { useSelector } from 'react-redux';
               <label className="name1">Age of Construction </label>
               <br/>
         
-              <select className="drop name2">
-                <option value="-1">Age of Construction</option>
-                <option value="11651">New Construction</option>
-                <option value="11652">Less than 5 years</option>
-                <option value="11653">5 to 10 years</option>
+              <select className="drop name2"
+              defaultValue={constructionage}
+              onChange={(e) => setConstructionage(e.target.value)}
+              
+              >
+                <option value="Age of Construction">Age of Construction</option>
+                <option value="New Construction">New Construction</option>
+                <option value="Less than 5 years">Less than 5 years</option>
+                <option value="5 to 10 years">5 to 10 years</option>
                 <option value="11654">10 to 15 years</option>
-                <option value="11655">15 to 20 years</option>
-                <option value="11656">Above 20 years</option>
+                <option value="10 to 15 years">15 to 20 years</option>
+                <option value="Above 20 years">Above 20 years</option>
               </select>
             </div>
             <br/>
@@ -883,7 +929,11 @@ import { useSelector } from 'react-redux';
               <div className="sub-area1">
                 <label className="name1">Open Car Parking(For) </label><br/>
                 <div className="sub-area">
-                  <input type="text" className="form-control" placeholder="Super Area" id="name2"/>
+                  <input type="text" className="form-control" placeholder="Super Area" id="name2"
+                   value={opencarparking}
+                   onChange={(e) => setsetOpencarparking(e.target.value)}
+                  
+                  />
         
                   <select className="drop1">
                     <option value="-1">Unit</option>
@@ -899,7 +949,13 @@ import { useSelector } from 'react-redux';
               <div className="sub-area1">
                 <label className="name1">Covered Car Parking </label><br/>
                 <div className="sub-area">
-                  <input type="text" className="form-control" placeholder="Parking" id="name2"/>
+                  <input type="text" className="form-control" placeholder="Parking" id="name2"
+                  
+                  value={coveredcarparking}
+                  onChange={(e) => setCoveredcarparking(e.target.value)}
+                 
+                  
+                  />
         
                   <select className="drop1">
                     <option value="-1">Unit</option>

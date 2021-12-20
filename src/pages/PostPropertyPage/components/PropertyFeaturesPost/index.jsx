@@ -174,6 +174,7 @@ export const PropertyFeaturesPost = ({bedroom,setBedroom,bathroom,setBathroom,ba
                       <label for="radiofl_1">Lower Basement</label>
         
                       <input type="radio" id="radiofl_2" name="radioFruit2" value="Upper Basment"
+
                        onChange={(e)=>setFloor(e.target.value)}
                       />
                       <label for="radiofl_2">Upper Basement</label>

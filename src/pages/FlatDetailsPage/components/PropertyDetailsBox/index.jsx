@@ -189,26 +189,26 @@ export const PropertyDeatailsBox = (props) => {
                                     <div class="col-value value1"><span>
                                             <select name="area">
                                                 <option value="1">sqft</option>
-                                                <option value="1">sqyrd</option>
+                                                {/* <option value="1">sqyrd</option>
                                                 <option value="1">sqm</option>
                                                 <option value="1">acre</option>
-                                                <option value="1">sqft</option>
+                                                <option value="1">sqft</option> */}
 
                                             </select>
-                                        </span><br/>₹ {props. per_square_fit}/sqft</div>
+                                        </span><br/>₹ {props.superarea_length}</div>
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Carpet area</div>
                                     <div class="col-value value1"><span>
                                             <select name="area">
                                                 <option value="1">sqft</option>
-                                                <option value="1">sqyrd</option>
+                                                {/* <option value="1">sqyrd</option>
                                                 <option value="1">sqm</option>
                                                 <option value="1">acre</option>
-                                                <option value="1">sqft</option>
+                                                <option value="1">sqft</option> */}
 
                                             </select>
-                                        </span><br/>₹ 4,636/sqft</div>
+                                        </span><br/>{props.carpet_area}</div>
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Loading<i class="bi bi-info-circle"></i></div>
@@ -231,11 +231,11 @@ export const PropertyDeatailsBox = (props) => {
                             <div class="subrow rowsec">
                                 <div class="subcol">
                                     <div class="col-title">Status</div>
-                                    <div class="col-value value1">Ready to Move</div>
+                                    <div class="col-value value1">{props.Possession_Status}</div>
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Transaction type</div>
-                                    <div class="col-value value1">New Property <br/><span class="value-link"> Get Documents
+                                    <div class="col-value value1">{props.transaction_type} <br/><span class="value-link"> Get Documents
                                             Verified</span>
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@ export const PropertyDeatailsBox = (props) => {
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Car parking</div>
-                                    <div class="col-value value1">1 Covered</div>
+                                    <div class="col-value value1">{props.covered_carparking}</div>
                                 </div>
 
                             </div>
