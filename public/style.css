@@ -617,7 +617,7 @@
     border-radius: 8px;
     overflow: hidden;
     margin-top: 40px;
-    margin-right: 100px;
+    margin-right: 50px;
   }
   .mb-search-banner .search-payrent-banner:hover {
     box-shadow: 0 3px 9px 0 rgb(48 48 48 / 20%);
@@ -4032,22 +4032,52 @@
 .badge{
   background-color: #ffc72c;
 }
-.btn  {
-  background-color: #ffc72c;
-}
-
-.btn:hover {
-  background-color: #ffde82;
-}
-
-/* .carousel-item{
+.mb-home__collection-search__card {
+  width: 300px;
+  height: 160px;
+  border: 1px solid rgba(255,199,44,.4);
+  background-color: rgba(255,247,225,.4);
   position: relative;
-    display: none;
-    float: left;
-    width: 100%;
-    margin-right: -100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition: transform .6s ease-in-out;
-    height: 250px;
-} */
+  overflow: hidden;
+  border-radius: 8px;
+  background-clip: padding-box;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-top: 15px;
+  padding-left: 17px;
+ 
+}
+
+.mb-home__collection-search__card__title {
+  color: #303030;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.mb-home__collection-search__card__title--count {
+  font-size: 32px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#d8232a,#ffc72c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mb-home__collection-search__card  {
+  box-shadow: 0 0 1px #515151;
+  ;
+}
+
+
+.mb-home__collection-search__card--anchor {
+  color: #d8232a;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 20px;
+  position: absolute;
+  bottom: 32px;
+  line-height: 16px;
+}
+.diff-prop-box{
+  display: flex;
+  
+}

@@ -19,7 +19,7 @@ export const PostButton = () => {
     return (
         <div>
             <div className="grid-item" onClick={post}>
-                <button className="btn btn-light " id="postp" type="button"> Post Property FREE</button>
+                <button className="btn btn-light " id="postp" type="button" style={{backgroundColor:' #ffc72c',}}> Post Property FREE</button>
             </div>
         </div>
     )

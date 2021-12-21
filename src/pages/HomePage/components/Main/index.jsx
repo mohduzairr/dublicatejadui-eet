@@ -2,8 +2,8 @@ import { Footer } from 'comman/components/Footer';
 import Header from 'comman/components/Header';
 import { SubHeader } from 'comman/components/SubHeader';
 import React from 'react'
-// import HomeProperties from './components/HomeProperties';
 import HomeProperties from './components/HomeProperties';
+// import HomeProperties from './components/HomeProperties';
 import Search from './components/Search';
 
 

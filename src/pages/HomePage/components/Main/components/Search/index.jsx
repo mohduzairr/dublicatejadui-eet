@@ -145,7 +145,7 @@ function Search() {
             </div>
             <div className="search-payrent-banner card-shadow">
                 <a href="#" target="_blank">
-                    <img className="img1" src="images/hoamloan.jpg" alt="Home Loan" /></a>
+                    <img className="img1" src="images/banner6.jpg" alt="Home Loan" /></a>
 
             </div>
         </div>
