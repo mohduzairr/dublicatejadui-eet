@@ -238,44 +238,44 @@ export const PropertyFeaturesPost = ({bedroom,setBedroom,bathroom,setBathroom,ba
         
                   <ul>
                     <div className="radio-toolbar name2">
-                      <input type="radio" id="radio4" name="radioFruit3" value="apple"/>
-                      <label for="radio1">1</label>
+                      <input type="radio" id="radio12" name="radioFruit3" value="1"/>
+                      <label for="radio12">1</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="banana"/>
-                      <label for="radio2">2</label>
+                      <input type="radio" id="radio14" name="radioFruit3" value="2"/>
+                      <label for="radio14">2</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="orange"/>
-                      <label for="radio3">3</label>
+                      <input type="radio" id="radio15" name="radioFruit3" value="3"/>
+                      <label for="radio15">3</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="apple"/>
-                      <label for="radio1">4</label>
+                      <input type="radio" id="radio50" name="radioFruit3" value="4"/>
+                      <label for="radio50">4</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="banana"/>
-                      <label for="radio2">5</label>
+                      <input type="radio" id="radio60" name="radioFruit3" value="5"/>
+                      <label for="radio60">5</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="orange"/>
-                      <label for="radio3">6</label>
+                      <input type="radio" id="radio61" name="radioFruit3" value="6"/>
+                      <label for="radio61">6</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="orange"/>
-                      <label for="radio4">7</label>
+                      <input type="radio" id="radio52" name="radioFruit3" value="7"/>
+                      <label for="radio52">7</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="apple"/>
-                      <label for="radio1">8</label>
+                      <input type="radio" id="radio53" name="radioFruit3" value="8"/>
+                      <label for="radio53">8</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="banana"/>
-                      <label for="radio2">9</label>
+                      <input type="radio" id="radio54" name="radioFruit3" value="9"/>
+                      <label for="radio54">9</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="orange"/>
-                      <label for="radio3">10</label>
+                      <input type="radio" id="radio55" name="radioFruit3" value="10"/>
+                      <label for="radio55">10</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="apple"/>
-                      <label for="radio1">11</label>
+                      <input type="radio" id="radio56" name="radioFruit3" value="11"/>
+                      <label for="radio56">11</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="banana"/>
-                      <label for="radio2">12</label>
+                      <input type="radio" id="radio57" name="radioFruit3" value="12"/>
+                      <label for="radio57">12</label>
         
-                      <input type="radio" id="radio4" name="radioFruit3" value="orange"/>
-                      <label for="radio3">13</label>
+                      <input type="radio" id="radio58" name="radioFruit3" value="13"/>
+                      <label for="radio58">13</label>
                     
         
                       <select name="bedrooms" className="option-arrow">

@@ -333,9 +333,9 @@ import { useSelector } from 'react-redux';
             <div className="radio1">
         
               <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-              <label for="name"> Full House</label>
+              <label for="name"   style={{marginLeft:'10px'}}> Full House</label>
               <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-              <label for="name"> On sharing basis
+              <label for="nam" style={{marginLeft:'10px'}}> On sharing basis
         
               </label>
         

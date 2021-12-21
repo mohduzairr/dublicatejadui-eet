@@ -5,11 +5,12 @@ import { FlatsInCity } from './components/FlatInCity'
 import { BuyBudgetFlat } from './components/BuyBudgetFlat'
 import { RentFlatCity } from './components/RentFlatCity'
 import { RentBudgetFlat } from './components/RentBudgetFlat'
+import { useSelector } from 'react-redux'
 
 
 export const SubHeader = () => {
     const history=useHistory()
-
+    const user = useSelector(state => state.user)
 
 
     const calculator=()=>{
@@ -27,7 +28,16 @@ export const SubHeader = () => {
     }
      
    
+    const redirectpostpage=()=>{
+        if(user?.data?.token){
+            history.push('/propertypost');
+    
+         }else{
+             alert("please first login than you can post the property")
+            history.push('/login');
+         }
 
+    }
    
 
    
@@ -113,7 +123,7 @@ export const SubHeader = () => {
                                         <div className="drop-heading">For Owner</div>
                                         <div className="drop-links">
 
-                                            <li>
+                                            <li onClick={redirectpostpage}>
                                                 <a href="">Post Propety</a>
                                             </li>
                                             <li>
