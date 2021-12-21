@@ -24,13 +24,13 @@ export const Slider = (props) => {
     
                     
                     <div className="carousel-item active">
-                    <img src="images/banner1.jpg" className="d-block w-100" alt="..." /> 
+                    <img src="images/banner2.png" className="d-block w-100" alt="..." style={{height:'233px'}} /> 
                     </div> 
                     <div className="carousel-item">
-                        <img src="images/banner1.jpg" className="d-block w-100" alt="..." />
+                        <img src="images/banner3.png" className="d-block w-100" alt="..." style={{height:'233px'}}  />
                     </div>
                     <div className="carousel-item">
-                        <img src="images/banner1.jpg" className="d-block w-100" alt="..." />
+                        <img src="images/banner4.png" className="d-block w-100" alt="..." style={{height:'233px'}} />
                     </div>  
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

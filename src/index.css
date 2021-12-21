@@ -27,7 +27,7 @@ padding: 0px;
 .head{
 width: 100%;
 height: 50px;
-background-color: var(--tertiary);
+background-color: #d8232a;;
 top: 0;
 left: 0;
 }
@@ -551,12 +551,12 @@ position:relative;
 
 
 
-.mb-search__btn {
+/* .mb-search__btn {
 float: right;
 width: 141px;
 height: 48px;
 border-radius: 26px;
-background-color: var(--tertiary);
+background-color: #d8232a;;
 margin: 6px 6px 0 0;
 cursor: pointer;
 text-align: center;
@@ -564,7 +564,7 @@ font-size: 18px;
 font-weight: 700;
 line-height: 46px;
 color: var(--primary);
-}
+} */
 .mb-search-banner .search-payrent-banner {
 float: right;
 width: 272px;
