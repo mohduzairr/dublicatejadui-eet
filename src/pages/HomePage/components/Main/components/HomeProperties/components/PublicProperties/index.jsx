@@ -35,6 +35,7 @@ function PublicProperties({title}) {
                         id={properties.id}
                         image={properties.property_images} 
                         type={properties.type}
+                        location={properties.location}
                          />
 
                       )

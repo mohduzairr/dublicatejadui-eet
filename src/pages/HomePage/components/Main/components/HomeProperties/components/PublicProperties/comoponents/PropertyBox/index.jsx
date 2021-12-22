@@ -28,7 +28,7 @@ function PropertyBox(props) {
                         <span className="card__title--count"></span>
                         {props.type}
                     </div>
-                    <span className="card--anchor">Explore</span>
+                    <span className="card--anchor">{props.location}</span>
                 </div>
             </a>
         </div>

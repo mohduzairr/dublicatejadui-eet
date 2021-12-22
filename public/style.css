@@ -4062,9 +4062,20 @@
   -webkit-text-fill-color: transparent;
 }
 
-.mb-home__collection-search__card  {
-  box-shadow: 0 0 1px #515151;
-  ;
+
+.bodynew {
+  font-family: Montserrat,Helvetica,Arial,sans-serif;
+  line-height: 30px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.bodynew :hover{
+  box-shadow: 0 0 2px #515151;
+
 }
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router'
 
-export const AdvicesBox = ({title,title1,title2,title3,title4,title5,title6}) => {
+export const AdvicesBox = ({title,title1,title2,title3,title4,title5,title6,title50}) => {
     const history=useHistory()
     const redirect = ()=>{
         history.push({
@@ -18,7 +18,7 @@ export const AdvicesBox = ({title,title1,title2,title3,title4,title5,title6}) =>
                     {title6}
                     <h4>{title}</h4>
                     <p>{title1}</p>
-                    <p className="view">{title2}</p>
+                    <p className="view">{title50} {title2}</p>
 
 
                 </div>
