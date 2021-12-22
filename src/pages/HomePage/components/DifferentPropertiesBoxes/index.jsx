@@ -5,7 +5,7 @@ export const DifferentPropertiesBoxes = () => {
     <div className="body">
       <div class="mb-home__collection-search__card card-shadow card-new-properties">
         <a
-          href="https://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment&amp;cityName=Chennai"
+          href=""
           id="lastSearchURL"
           target="_blank"
           onclick="fireCollectionGTM(event,'Properties listed for you','1/4');"

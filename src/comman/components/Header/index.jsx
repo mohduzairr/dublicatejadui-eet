@@ -259,18 +259,18 @@ function Header({ setCity,setLocation}) {
             <div className="dropdown-menu">
             <div className="login">
             <div className="mb-login__box">
-            {/* <div className="mb-login__divider1">
+            <div className="mb-login__divider1">
             <span className="mb-login__divider__label">My Activity</span>
-            </div> */}
-            <div className="mb-login__drop-links">
-            {/* <li ><a href="">Contacted Properties</a></li> */}
-            <li ><div className="drop-links-bdg" onClick={proplist}>Viewed Properties</div></li>
-            {/* <li><a href="">Shortlisted Properties</a></li> */}
-            {/* <li id=""><a href="">Searches</a></li> */}
             </div>
-            {/* <div className="mb-login__divider"></div> */}
             <div className="mb-login__drop-links">
-            {/* <li><a href="">Recommendations</a></li> */}
+            <li ><a href="">Contacted Properties</a></li>
+            <li ><div className="drop-links-bdg" onClick={proplist}>Viewed Properties</div></li>
+            <li><a href="">Shortlisted Properties</a></li>
+            <li id=""><a href="">Searches</a></li>
+            </div>
+            <div className="mb-login__divider"></div>
+            <div className="mb-login__drop-links">
+            <li><a href="">Recommendations</a></li>
             <li><div className="drop-links-bdg" onClick={profile}> {user?.data?.token &&  "My Profile"}</div></li>
             </div>
             </div>
