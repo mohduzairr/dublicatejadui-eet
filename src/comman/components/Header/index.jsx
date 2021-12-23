@@ -172,9 +172,9 @@ function Header({ setCity,setLocation}) {
             {/* </ul> */}
             {/* <div className="city-drop-heading">Other Cities</div> */}
             <div className="cell">
-            <a href="" className="text3">INDIA</a>
+            {/* <a href="" className="text3">INDIA</a> */}
             </div><br/>
-            <div className="city-drop-heading">Popular Cities</div>
+            {/* <div className="city-drop-heading">Popular Cities</div> */}
 
             <ul className="city-drop-link-group">
 

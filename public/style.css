@@ -107,6 +107,7 @@
   .container3 {
     padding-top: 30px;
     background-color: var(--secondary);
+    /* position:absolute; */
   }
   .disclaim1 {
     padding: 16px 0;
@@ -864,8 +865,12 @@
   
   .container1 {
     padding: 2px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     justify-content: center;
+    /* justify-content: space-around; */
+    overflow-y: auto;
+    /* overscroll-behavior-y: none; */
+    overflow-y: hidden;
     position: relative;
     width: 100%;
     height: 100%;
@@ -874,6 +879,7 @@
     transition-property: transform;
     justify-content: flex-start;
     margin-left: 10px;
+
   }
   
   .box1 {
@@ -3443,10 +3449,10 @@
     .back .text12 {
       vertical-align: 12px;
     }
-    .container1 {
+    /* .container1 {
       justify-content: start;
       overflow-x: auto;
-    }
+    } */
     .container1::-webkit-scrollbar {
       width: 0;
     }
@@ -3490,10 +3496,10 @@
     .mb-search-banner .search-payrent-banner {
       display: none;
     }
-    .container1 {
+    /* .container1 {
       justify-content: start;
       overflow-x: auto;
-    }
+    } */
   
     .container1::-webkit-scrollbar {
       width: 0;
@@ -3824,6 +3830,7 @@
 }
 .city-pop{
   display: flex;
+  margin-top: 10px;
   
 }
 .city{

@@ -36,6 +36,7 @@ import CardList from './components/CardList/indes';
 
     }
     return (
+        <>
         <div>
           
              <Header
@@ -86,9 +87,12 @@ import CardList from './components/CardList/indes';
              
                         )})
                     }
-                          <Footer/>
+                            <Footer/>
+
 
         </div>
+
+        </>
     )
 }
 

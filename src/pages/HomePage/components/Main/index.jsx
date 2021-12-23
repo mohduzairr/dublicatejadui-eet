@@ -19,6 +19,7 @@ const Main = ({city, setCity ,name , setName,location,setLocation}) => {
                 <Footer/>
 
             </div>
+
         </>
     )
 }
