@@ -32,7 +32,7 @@ const CardList = (props) => {
                 <div class="pcard__heading">
                   <h2>
                     <span class="pcard__title">
-                      <span class="pcard__title1">{props.type}</span> for Sale in KW Blue Pearl , {props.location}
+                      <span class="pcard__title1">{props.type}</span> for Sale in {props.city} , {props.location}
                     </span>
                   </h2>
                 </div>

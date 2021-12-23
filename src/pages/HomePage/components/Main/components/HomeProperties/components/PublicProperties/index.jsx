@@ -26,9 +26,11 @@ function PublicProperties({title}) {
                     <div className="container1">
 
               {    
-                 fetchProperties.map((properties,index)=>{
+                 fetchProperties.slice(0,4).map((properties,index)=>{
                      
+                 
 
+                  
                       return(
                         properties.property_images &&
                         <PropertyBox
@@ -39,6 +41,7 @@ function PublicProperties({title}) {
                          />
 
                       )
+                    
                   })
               }        
                    

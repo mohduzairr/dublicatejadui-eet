@@ -26,7 +26,7 @@ import MallPropertyBoxes from './components/MallPropertyBoxes';
             <div className="container1">
 
             {    
-                 fetchProperties.map((properties,index)=>{
+                 fetchProperties.slice(0,4).map((properties,index)=>{
                      
 
                       return(

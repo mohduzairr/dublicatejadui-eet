@@ -1,15 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
 
 function PropertyBox(props) {
+    const property = useSelector(state => state.property)
     const  history=useHistory()
     const redirect =(id)=>{
       history.push({
         pathname: '/propertylist',
+        city:property?.selectedCity?.city,
+        type:props.type,
         state: props.id
       });
     }
-    console.log(redirect);
+    console.log(props.id+"id milegi");
 
     return (
         
