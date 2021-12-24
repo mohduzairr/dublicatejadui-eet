@@ -58,6 +58,7 @@ import { useSelector } from 'react-redux';
     const [transactiontype, setTransactiontype] = useState()
     const [possessionstatus,setPossessionStatus] = useState()
     const [constructionage, setConstructionage] = useState()
+    const [bookingamount, setBookingamount] = useState()
     const [images, setImages] = useState([]);
     const[checkimage,setCheckimage]=useState();
     const [allEntry, setAllentry] = useState([]);
@@ -165,9 +166,11 @@ import { useSelector } from 'react-redux';
       data.append('constructionage',constructionage)
       data.append('opencarparking',opencarparking)
       data.append('coveredcarparking',coveredcarparking)
+      data.append('bookingamount',bookingamount)
 
 
 
+      
 
 
       
@@ -1016,9 +1019,13 @@ import { useSelector } from 'react-redux';
         
             <div className="form-group first">
               <label className="name1">Booking/Token Amount </label>
-              <input type="text" className="form-control" placeholder="Booking/Token Amount" id="name1"/>
+              <input type="text" className="form-control" placeholder="Booking/Token Amount" id="name1"
+               value={ bookingamount}
+               onChange={(e)=> setBookingamount(e.target.value)}
+              
+              />
             </div>
-        
+           
         
         
             <div className="form-group first1">

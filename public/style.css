@@ -4078,6 +4078,7 @@
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
+  padding-bottom:3px;
 }
 
 .bodynew :hover{

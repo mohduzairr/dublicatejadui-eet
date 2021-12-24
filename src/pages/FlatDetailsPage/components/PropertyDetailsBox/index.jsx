@@ -195,7 +195,7 @@ export const PropertyDeatailsBox = (props) => {
                                                 <option value="1">sqft</option> */}
 
                                             </select>
-                                        </span><br/>₹ {props.superarea_length}</div>
+                                        </span><br/>₹ {props.superarea_length}sqft</div>
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Carpet area</div>
@@ -208,7 +208,7 @@ export const PropertyDeatailsBox = (props) => {
                                                 <option value="1">sqft</option> */}
 
                                             </select>
-                                        </span><br/>{props.carpet_area}</div>
+                                        </span><br/>{props.carpet_area}sqft</div>
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Loading<i class="bi bi-info-circle"></i></div>
@@ -241,7 +241,7 @@ export const PropertyDeatailsBox = (props) => {
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Floor</div>
-                                    <div class="col-value value1">3 (Out of 4 Floors)</div>
+                                    <div class="col-value value1">{props.floor}</div>
                                 </div>
                                 <div class="subcol">
                                     <div class="col-title">Car parking</div>

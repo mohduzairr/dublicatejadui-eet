@@ -7,8 +7,10 @@ import { useHistory } from 'react-router'
       history.push({
           pathname:'./flatdetails',
           state:props.id
+         
       })
    }
+   console.log(props.id+"id bta do")
 
 
     return (

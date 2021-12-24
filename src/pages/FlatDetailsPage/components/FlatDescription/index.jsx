@@ -1,6 +1,7 @@
 import React from 'react'
+import { PropertySimilarProject } from '../PropertySimilarProject'
 
-export const FlatDescription = () => {
+export const FlatDescription = (props) => {
     return (
         <>
         <div class="infotab5">
@@ -39,7 +40,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Booking Amount </div>
-                <div class="spec-2">₹ 11,000
+                <div class="spec-2">₹ {props.booking_amount}
 
                 </div>
 
@@ -64,8 +65,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Address </div>
-                <div class="spec-2">Uttam Nagar West, New Delhi, Uttam Nagar West, New Delhi - West, Delhi
-                    NCR
+                <div class="spec-2">{props.address}
 
 
                 </div>
@@ -76,7 +76,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Landmarks</div>
-                <div class="spec-2">Uttam nager west metro station.
+                <div class="spec-2">near {props.landmark}.
 
 
                 </div>
@@ -87,9 +87,11 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Facing </div>
-                <div class="spec-2">South - East<br/>
-                    <i class="bi bi-compass"></i> Talk to our best Vastu Consultants to get instant
-                    solution. View Consultants
+                <div class="spec-2">{props.property_facing}<br/>
+                    <i class="bi bi-compass">
+                        </i> 
+                        {/* Talk to our best Vastu Consultants to get instant
+                    solution. View Consultants */}
 
                 </div>
 
@@ -98,8 +100,8 @@ export const FlatDescription = () => {
         <li>
             <div class="infospec">
                 <div class="spec-1">
-                    RERA ID </div>
-                <div class="spec-2">no
+                    REPAID </div>
+                <div class="spec-2">{props.repaid_status}
 
                 </div>
 
@@ -109,7 +111,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Overlooking </div>
-                <div class="spec-2">Main Road
+                <div class="spec-2">{props.property_overlooking}
 
 
                 </div>
@@ -120,7 +122,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Flooring </div>
-                <div class="spec-2">Vitrified
+                <div class="spec-2">{props.flooring}
 
                 </div>
 
@@ -130,7 +132,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Water Availability </div>
-                <div class="spec-2">24 Hours Available
+                <div class="spec-2">{props.water_availability_status}
 
 
                 </div>
@@ -141,7 +143,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Status of Electricity </div>
-                <div class="spec-2">No/Rare Powercut
+                <div class="spec-2"> {props.electricity_status}  
 
 
                 </div>
@@ -152,7 +154,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Lift </div>
-                <div class="spec-2">None
+                <div class="spec-2">{props.lift_status}
 
                 </div>
 
@@ -162,7 +164,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Age of Construction </div>
-                <div class="spec-2">New Construction
+                <div class="spec-2">{props.construction_age}
 
 
                 </div>
@@ -183,7 +185,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Furnishing </div>
-                <div class="spec-2">Semi-Furnished
+                <div class="spec-2">{props.furnish_status}
 
 
                 </div>
@@ -194,7 +196,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Type of Ownership </div>
-                <div class="spec-2">Freehold
+                <div class="spec-2"> {props.ownership_status}
 
                 </div>
 
@@ -204,7 +206,7 @@ export const FlatDescription = () => {
             <div class="infospec">
                 <div class="spec-1">
                     Brokerage Response </div>
-                <div class="spec-2">Brokers please do not contact
+                <div class="spec-2">   {props.brokerage_status}
 
 
                 </div>
