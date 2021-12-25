@@ -18,7 +18,7 @@ import { faHome, faArrowRight } from "@fortawesome/free-solid-svg-icons";
             <div className="container1">
 
                 <AdvicesBox
-                    title3={<i class="fas fa-chart-line" style={{fontSize: '40px',color:'red'}} ></i> }
+                    title3={<i class="fas fa-chart-line" style={{fontSize: '40px',color:'rgb(216, 35, 42)'}} ></i> }
                
                     title="Rates & Trends"
                     title1="Know all about Property Rates & Trends in your city."
@@ -28,7 +28,7 @@ import { faHome, faArrowRight } from "@fortawesome/free-solid-svg-icons";
                 />
 
                 <AdvicesBox
-                     title4={<i class='fas fa-hand-holding-usd' style={{fontSize: '40px',color:'red'}}></i>}
+                     title4={<i class='fas fa-hand-holding-usd' style={{fontSize: '40px',color:'rgb(216, 35, 42)'}}></i>}
                     title="Investment Hotspot"
                     title1="Discover the top laocalities in your city for investment."
                     title2={<FontAwesomeIcon icon={faArrowRight} />}
@@ -36,7 +36,7 @@ import { faHome, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
                 />
                 <AdvicesBox
-                    title5={<i class='fas fa-wallet' style={{fontSize: '40px',color:'red'}}></i>}
+                    title5={<i class='fas fa-wallet' style={{fontSize: '40px',color:'rgb(216, 35, 42)'}}></i>}
                     title="Research insights"
                     title1="Get experts insights and research report on real state. "
                     title2={<FontAwesomeIcon icon={faArrowRight} />}
@@ -44,7 +44,7 @@ import { faHome, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
                 />
                 <AdvicesBox
-                    title6={<i class="fa fa-calculator" style={{fontSize: '40px',color:'red'}}></i>}
+                    title6={<i class="fa fa-calculator" style={{fontSize: '40px',color:'rgb(216, 35, 42)'}}></i>}
                     title="EMI Calculator"
                     title1="Know how much you'll have to pay every month on your loan."
                     title2={<FontAwesomeIcon icon={faArrowRight} />}

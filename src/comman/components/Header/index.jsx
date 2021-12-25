@@ -275,7 +275,7 @@ function Header({ setCity,setLocation}) {
             </div>
             </div>
             <div className="mb-login__box signup-box">
-            <a href="#" className="mb-login__drop-cta" onClick={login}   >Login</a>
+            <a href="#" className="mb-login__drop-cta" onClick={login} style={{backgroundColor:'rgb(216, 35, 42)'}}  >Login</a>
             <div className="mb-login__drop-text-2">New to Magicbricks?<a href="#"  className="signup-link"  onClick={signup}  >SignUp</a></div>
             </div>
             </div>
