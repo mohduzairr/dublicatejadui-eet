@@ -1,7 +1,7 @@
 const initialState = {
     properties:[],
     selectedCity:{
-        city:"Delhi"
+        city:"kampot"
     },
     selectedLocation:""
 }

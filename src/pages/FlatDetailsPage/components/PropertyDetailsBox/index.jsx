@@ -255,7 +255,7 @@ export const PropertyDeatailsBox = (props) => {
                         <div class="sub-btton">
                             <span><span class="usp"> USP</span>&nbsp;
                                 Newly Constructed Property</span><br/>
-                            <button type="button" class="btn btn-danger">Contact Agent</button>
+                            <button type="button" class="btn btn-danger" style={{backgroundColor:'#d8232a'}}>Contact Agent</button>
                             <button type="button" class="btn btn-outline-danger">Save for Later</button>
                             <i class="bi bi-heart"></i>
                         </div>

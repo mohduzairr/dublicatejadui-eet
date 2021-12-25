@@ -17,7 +17,7 @@ const CardList = (props) => {
    
       <div class="container contentbody justify-content-center" >
        
-
+  { props ?
         <div class="card-menu" onClick={details}>
           <div class="firstcard">
             <div class="card_container">
@@ -28,6 +28,7 @@ const CardList = (props) => {
                 <span class="semi-bold">₹{props.flatprice}</span>
                 <span class="semi-bold2">₹{props.per_square_fit}/sqr-fit</span>
               </div>
+              
               <div class="contentt">
                 <div class="pcard__heading">
                   <h2>
@@ -36,12 +37,12 @@ const CardList = (props) => {
                     </span>
                   </h2>
                 </div>
-
+                    
                 <div class="pcard__society">
                   <span>Commercial Complex: </span>
 
                   <a class="pcard__link" href="">
-                    KW Blue Pearl{" "}
+                   {props.commercialcomplex_status}
                   </a>
                 </div>
 
@@ -57,7 +58,7 @@ const CardList = (props) => {
                   <div class="truncate1">
                     <div class="pcard__summary1">
                       {" "}
-                      24 Hours Water Availability...
+                      {props.water_availability_status} Water Availability...
                     </div>
                   </div>
                   <div class="pcard_line"></div>
@@ -78,7 +79,7 @@ const CardList = (props) => {
                     <button type="button" class="btn btn-outline-danger">
                       Enquiry Now
                     </button>
-                    <button type="button" class="btn btn-danger">
+                    <button type="button" class="btn btn-danger" style={{backgroundColor:' rgb(216, 35, 42)'}}>
                       Contact Builder
                     </button>
                   </div>
@@ -94,20 +95,21 @@ const CardList = (props) => {
               <div class="bnrCont">
                 <div class="proName"> 4 Bhk Flat </div>
                 <div class="buidName">{props.location}</div>
-                <div class="proLov">2200 sqft</div>
+                <div class="proLov">{props.superarea_length}</div>
                 <div class="bhkInfo">Ready to Move</div>
                 <div class="priceInfo">
-                  <span class="rsIco"></span>{props.flatprice}$<span></span>
+                  <span class="rsIco"></span>{props.flatprice}₹<span></span>
                 </div>
                 <div class="marketedBy">
                   Owner
                   <br />
-                  Rahul Agarwal
+                 {props.name}
                 </div>
               </div>
             </div>
           </div>
         </div>
+   :<p>Property Not Fount</p>  }
       </div>
     </>
     

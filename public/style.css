@@ -976,7 +976,7 @@
   
   .bi {
     padding-left: 6px;
-    color: var(--tertiary);
+    color: rgb(216, 35, 42);
     font-size: 14px;
   }
   .bi-house-fill {
@@ -2652,7 +2652,7 @@
   .viewPh,
   .viewPh a {
     font-size: 14px;
-    color: #d8232a;
+    color: rgb(216, 35, 42);
     float: right;
     font-weight: 600;
     padding-top: 30px;
@@ -2694,7 +2694,7 @@
     outline: none;
   }
   .TabSec .TabNav ul li a:hover {
-    color: var(--tertiary);
+    color: rgb(216, 35, 42);
   }
   .infotab2 {
     height: 40px;
@@ -2785,11 +2785,14 @@
   .value-link {
     text-decoration: underline;
     font-size: 14px;
-    color: var(--tertiary);
+    color:rgb(216, 35, 42);
   }
   .sub-btton .btn {
     font-size: 14px;
     margin-right: 8px;
+  }
+  .sub-btton .btn :hover {
+     background-color: rgb(216, 35, 42);
   }
   .sub-btton {
     font-size: 12px;
@@ -2807,7 +2810,7 @@
   .usp {
     padding: 5px;
     color: var(--primary);
-    background-color: var(--tertiary);
+    background-color: rgb(216, 35, 42);
   }
   .infotab4 {
     display: flex;

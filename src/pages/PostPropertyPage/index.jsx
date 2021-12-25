@@ -59,6 +59,7 @@ import { useSelector } from 'react-redux';
     const [possessionstatus,setPossessionStatus] = useState()
     const [constructionage, setConstructionage] = useState()
     const [bookingamount, setBookingamount] = useState()
+    const [postreason, setPostreason] = useState()
     const [images, setImages] = useState([]);
     const[checkimage,setCheckimage]=useState();
     const [allEntry, setAllentry] = useState([]);
@@ -167,6 +168,8 @@ import { useSelector } from 'react-redux';
       data.append('opencarparking',opencarparking)
       data.append('coveredcarparking',coveredcarparking)
       data.append('bookingamount',bookingamount)
+      data.append('postreason',postreason)
+
 
 
 
@@ -335,9 +338,16 @@ import { useSelector } from 'react-redux';
             <label className="name1">You are posting as </label>
             <div className="radio1">
         
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+               value="Full House"
+               onChange={(e)=>setPostreason(e.target.value)} 
+              
+              />
               <label for="name"   style={{marginLeft:'10px'}}> Full House</label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+               value="On sharing basis"
+               onChange={(e)=>setPostreason(e.target.value)} 
+              />
               <label for="nam" style={{marginLeft:'10px'}}> On sharing basis
         
               </label>

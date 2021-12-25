@@ -9,8 +9,8 @@ function PropertyBox(props) {
       history.push({
         pathname: '/propertylist',
         city:property?.selectedCity?.city,
-        type:props.type,
-        state: props.id
+        // type:props.type,
+        // state: props.id
       });
     }
     console.log(props.id+"id milegi");

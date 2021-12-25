@@ -6,10 +6,10 @@ export const FlatDetailsSliderBox= (props) => {
    console.log("kabhinahi ==> "+props);
 
    const push_details = ()=>{
-    // history.push({
-    //     pathname: '/propertylist',
-    //     state: props.id
-    //   });
+    history.push({
+        pathname: '/propertylist',
+       state: props.id
+      });
     }
     return (
        <>

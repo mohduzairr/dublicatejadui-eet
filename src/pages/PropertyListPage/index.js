@@ -66,11 +66,11 @@ import CardList from './components/CardList/indes';
            setFetchProperties={setFetchProperties}
            />}
            
-            
                     {
-                       
+                        fetchProperties.length ?
                        fetchProperties.map((property,index)=>{
                             return (
+
                                 <CardList
                                 id={property.id}
                                 city={property.city}
@@ -83,10 +83,11 @@ import CardList from './components/CardList/indes';
                                 type={property.type}
                                 superarea_length={property.superarea_length}
                                 Possession_Status={property.Possession_Status}
+                                water_availability_status={property.water_availability_status}
+                                name={property.name}
+                                commercialcomplex_status={property.commercialcomplex_status}
                                 />
-             
-                        )})
-                    }
+                        )})  : <p style={{textAlign:'center',fontSize:"35px",paddingTop:"50px",paddingBottom:"50px",color:'rgb(216, 35, 42)'}}>Properties Not Found</p>    }
                             <Footer/>
 
 

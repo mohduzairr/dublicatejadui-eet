@@ -925,12 +925,12 @@ display: inline-block;
 }
 
 
-.bi{
+/* .bi{
 padding-left: 6px;
 color: var(--tertiary);
 font-size: 14px;
 
-}
+} */
 .bi-house-fill{
 font-size: 18px;
 }

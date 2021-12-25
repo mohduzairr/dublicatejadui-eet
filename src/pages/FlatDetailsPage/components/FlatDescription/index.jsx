@@ -248,7 +248,7 @@ export const FlatDescription = (props) => {
         <li class="lastspec">
             <div class="infospec">
                 <div class="spec-1">
-                    <button type="button" class="btn btn-danger">Contact Agent</button>
+                    <button type="button" class="btn btn-danger" style={{backgroundColor:'rgb(216, 35, 42)'}}>Contact Agent</button>
                 </div>
                 <div class="spec-2">
                 </div>
