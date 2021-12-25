@@ -496,23 +496,23 @@ import { useSelector } from 'react-redux';
               </div>
               <div className="radio1 name2">
                 <label>Any Construction done</label>
-                <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="radios" type="radio" name="flexRadioDefaultuv" id="flexRadioDefault111"/>
                 <label for="name"> Yes </label>
-                <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="radios" type="radio" name="flexRadioDefaultuv" id="flexRadioDefault111"/>
                 <label for="name"> No</label>
               </div>
               <div className="radio1 name2">
                 <label>Boundary wall made</label>
-                <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="radios" type="radio" name="flexRadioDefaultwx" id="flexRadioDefault112"/>
                 <label for="name"> Yes </label>
-                <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="radios" type="radio" name="flexRadioDefaultwx" id="flexRadioDefault113"/>
                 <label for="name"> No</label>
               </div>
               <div className="radio1 name2">
                 <label>Is in a gated colony</label>
-                <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="radios" type="radio" name="flexRadioDefaultyz" id="flexRadioDefault114"/>
                 <label for="name"> Yes </label>
-                <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="radios" type="radio" name="flexRadioDefaultyz" id="flexRadioDefault115"/>
                 <label for="name"> No</label>
               </div>
               <br/>
@@ -786,7 +786,7 @@ import { useSelector } from 'react-redux';
         
             <div className="radio1 name2">
               <label>Transaction Type </label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              <input className="radios" type="radio" name="flexRadioDefaulttt" id="flexRadioDefault1"
               value="New Property"
                onChange={(e) => {
                 console.log(e.currentTarget.value)
@@ -794,7 +794,7 @@ import { useSelector } from 'react-redux';
                  }}
               />
               <label for="name"> New Property </label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              <input className="radios" type="radio" name="flexRadioDefaulttt" id="flexRadioDefault1"
                value="Resale"
                onChange={(e) => {
                 console.log(e.currentTarget.value)
@@ -805,7 +805,7 @@ import { useSelector } from 'react-redux';
             </div>
             <div className="radio1 name2">
               <label>Possession Status</label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              <input className="radios" type="radio" name="flexRadioDefaulthe" id="flexRadioDefault100"
                 value="Under Construction"
                 onChange={(e) => {
                  console.log(e.currentTarget.value)
@@ -814,7 +814,7 @@ import { useSelector } from 'react-redux';
               
               />
               <label for="name"> Under Construction</label>
-              <input className="radios" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              <input className="radios" type="radio" name="flexRadioDefaulthe" id="flexRadioDefault100"
                 value="Ready to Move"
                 onChange={(e) => {
                  console.log(e.currentTarget.value)

@@ -105,7 +105,7 @@ export   const RegisterPage = () => {
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-12">
                             <div class="form-block1 mx-auto">
-                                <div class="p-head">
+                                <div class="p-head" >
                                     Sign Up
                                 </div>
 
@@ -209,7 +209,7 @@ export   const RegisterPage = () => {
 
 
                                     <div class="p-SignUp1">
-                                        <input type="submit" value="Sign Up" class="btn btn-block btn-danger"   />
+                                        <input type="submit" value="Sign Up" class="btn btn-block btn-danger"  style={{backgroundColor:'rgb(216, 35, 42)'}}  />
                                     </div>
 
                                     <div class="p-registered">
