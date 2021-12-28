@@ -67,7 +67,7 @@ export const PropertyDeatailsBox = (props) => {
                             <div class="bigimage">
 
                             <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    <img class="lazy" src={"http://127.0.0.1:8000/storage/property/" + props.images.split(',')[0]} />
+                                    <img class="lazy" src={"http://admin.csakh.com/project/public/storage/property/" + props.images.split(',')[0]} />
                                     <span class="photoCount">
                                         8 photos
                                     </span> </button>
@@ -118,7 +118,7 @@ export const PropertyDeatailsBox = (props) => {
                                                                     <button type="button" data-bs-target=".carouselExampleControls"
                                                                     data-bs-slide-to={index} class="active" aria-current={index==0}
                                                                     aria-label={"Slide "+index+1}>
-                                                                    <img src={"http://127.0.0.1:8000/storage/property/" + slider} class="d-block w-100" alt="..."/>
+                                                                    <img src={"http://admin.csakh.com/project/public/storage/property/" + slider} class="d-block w-100" alt="..."/>
                                                                 </button>)
                                                                 })
                                                             }
@@ -132,7 +132,7 @@ export const PropertyDeatailsBox = (props) => {
                                                                 
                                                                     <div class={"carousel-item" +  (index==0 ? " active":"")  } >
                                                                         
-                                                                    <img src={"http://127.0.0.1:8000/storage/property/" + bigslider} class="d-block w-100" alt="..."/>
+                                                                    <img src={"http://admin.csakh.com/project/public/storage/property/" + bigslider} class="d-block w-100" alt="..."/>
 
                                                                     </div>
                                                                 

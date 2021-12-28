@@ -1,7 +1,6 @@
 export const properties = {
   content: "This is a string",
   login_url: "https://admin.csakh.com/api/login",
-  // sign_up_url: "https://127.0.0.1:8000/api/save",
   sign_up_url: "https://admin.csakh.com/api/save",
   properties_list_url: "https://admin.csakh.com/api/getProperties",
   post_properties_url: "https://admin.csakh.com/api/add",

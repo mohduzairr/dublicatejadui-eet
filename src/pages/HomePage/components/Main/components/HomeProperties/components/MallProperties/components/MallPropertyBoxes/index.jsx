@@ -16,7 +16,7 @@ const MallPropertyBoxes = (props) => {
 
                 <div className="card12">
                 <div class="card--title2">{props.tupe }Mall in {props.city}</div>
-             <img src={"http://127.0.0.1:8000/storage/property/" + props.image.split(',')[0]} width="296" height="184" alt=""  onClick={redirect}/>                <div className="card--title2">{props.type}</div>
+             <img src={"http://admin.csakh.com/project/public/storage/property/" + props.image.split(',')[0]} width="296" height="184" alt=""  onClick={redirect}/>                <div className="card--title2">{props.type}</div>
 
 
                     <a href="">

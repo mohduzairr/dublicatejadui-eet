@@ -22,7 +22,7 @@ const CardList = (props) => {
           <div class="firstcard">
             <div class="card_container">
               <div class="imgsize">
-                <img src={"http://127.0.0.1:8000/storage/property/" + props.images .split(',')[0]}  alt="property" class="card_imag"  />
+                <img src={"http://admin.csakh.com/project/public/storage/property/" + props.images .split(',')[0]}  alt="property" class="card_imag"  />
               </div>
               <div class="rates">
                 <span class="semi-bold">₹{props.flatprice}</span>
@@ -91,7 +91,7 @@ const CardList = (props) => {
 
           <div class="secondcard">
             <div class="card_container">
-              <img src={"http://127.0.0.1:8000/storage/property/" + props.images .split(',')[0]} alt="Property" class="card_imag1" style={{'height':'50px'}}/>
+              <img src={"http://admin.csakh.com/project/public/storage/property/" + props.images .split(',')[0]} alt="Property" class="card_imag1" style={{'height':'50px'}}/>
               <div class="bnrCont">
                 <div class="proName"> 4 Bhk Flat </div>
                 <div class="buidName">{props.location}</div>

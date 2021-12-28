@@ -5,9 +5,9 @@ export const BaseSetting = {
     name: 'Propnex',
     displayName: 'Propnex',
     appVersion: '1.0.1',
-    domain: 'http://127.0.0.1:8000/',
-    apiDomain: 'http://127.0.0.1:8000/api/',
-    imageDomain: 'http://127.0.0.1:8000/assets/images/',
+    domain: 'https://admin.csakh.com/',
+    apiDomain: 'https://admin.csakh.com/api/',
+    imageDomain: 'https://admin.csakh.com/assets/images/',
     protocol: 'https',
     defaultLanguage: 'en',
     languageSupport: [

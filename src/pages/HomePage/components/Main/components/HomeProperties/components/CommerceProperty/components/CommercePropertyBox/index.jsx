@@ -22,7 +22,7 @@ import { useHistory } from 'react-router'
                 <a href="">
 
                 <div class="card--graphic1" onClick={details}>
-                <img src={"http://127.0.0.1:8000/storage/property/" + props.images .split(',')[0]} width="296" height="184" />
+                <img src={"http://admin.csakh.com/project/public/storage/property/" + props.images .split(',')[0]} width="296" height="184" />
                 </div>
 
                 <div class="card--content1">

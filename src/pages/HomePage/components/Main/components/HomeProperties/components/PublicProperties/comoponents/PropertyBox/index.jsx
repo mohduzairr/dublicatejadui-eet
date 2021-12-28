@@ -23,7 +23,7 @@ function PropertyBox(props) {
             <a href="">
 
                 <div className="card--graphic" onClick={redirect}>
-                    <img src={"http://127.0.0.1:8000/storage/property/" + props.image.split(',')[0]} width="296" height="184" alt="" />
+                    <img src={"http://admin.csakh.com/project/public/storage/property/" + props.image.split(',')[0]} width="296" height="184" alt="" />
                 </div>
 
                 <div className="card--content">
