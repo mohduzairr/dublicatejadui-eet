@@ -81,16 +81,16 @@ export const PropertyDeatailsBox = (props) => {
                                             <div class="modal-header">
                                                 <ul class="modal-title title-bar">
                                                     <li>
-                                                        <a href=""> Bathrooms</a>
+                                                        <a> Bathrooms</a>
                                                     </li>
                                                     <li>
-                                                        <a href=""> Others</a>
+                                                        <a> Others</a>
                                                     </li>
                                                     <li>
-                                                        <a href=""> Kitchen</a>
+                                                        <a > Kitchen</a>
                                                     </li>
                                                     <li>
-                                                        <a href=""> Bedrooms</a>
+                                                        <a> Bedrooms</a>
                                                     </li>
                                                 </ul>
 

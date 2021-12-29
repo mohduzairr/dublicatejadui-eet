@@ -17,7 +17,7 @@ export const FlatDetailsSliderBox= (props) => {
                 <div class="box1 box-detail">
 
                 <div class="card12 cards121">
-                    <a href="#">
+                    {/* <a > */}
 
                         <div class="card--graphic1" onClick={push_details}>
                         <img src={"http://admin.csakh.com/project/public/storage/property/" + props.images .split(',')[0]} width="296" height="184"/>
@@ -35,7 +35,7 @@ export const FlatDetailsSliderBox= (props) => {
 
                         </div>
 
-                    </a>
+                    {/* </a> */}
 
                 </div>
                 </div>

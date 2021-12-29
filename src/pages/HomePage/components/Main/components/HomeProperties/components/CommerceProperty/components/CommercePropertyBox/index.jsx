@@ -19,7 +19,7 @@ import { useHistory } from 'react-router'
             <div class="box1">
 
                 <div class="card12">
-                <a href="">
+                {/* <a> */}
 
                 <div class="card--graphic1" onClick={details}>
                 <img src={"http://admin.csakh.com/project/public/storage/property/" + props.images .split(',')[0]} width="296" height="184" />
@@ -29,7 +29,7 @@ import { useHistory } from 'react-router'
                 <div class="card--title1">{props.city}</div>
                 <div class="card__text1">{props.location}</div>
                 </div>
-                </a>
+                {/* </a> */}
                 </div>
             </div>
 

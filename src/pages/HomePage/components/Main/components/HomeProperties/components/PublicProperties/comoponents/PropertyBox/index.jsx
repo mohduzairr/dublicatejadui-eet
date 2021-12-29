@@ -20,7 +20,7 @@ function PropertyBox(props) {
         <div className="box1">
 
         <div className="card12">
-            <a href="">
+            {/* <a> */}
 
                 <div className="card--graphic" onClick={redirect}>
                     <img src={"http://admin.csakh.com/project/public/storage/property/" + props.image.split(',')[0]} width="296" height="184" alt="" />
@@ -34,7 +34,7 @@ function PropertyBox(props) {
                     </div>
                     <span className="card--anchor">{props.location}</span>
                 </div>
-            </a>
+            {/* </a> */}
         </div>
     </div>
     )

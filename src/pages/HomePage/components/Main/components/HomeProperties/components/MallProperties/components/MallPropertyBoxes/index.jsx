@@ -19,7 +19,7 @@ const MallPropertyBoxes = (props) => {
              <img src={"http://admin.csakh.com/project/public/storage/property/" + props.image.split(',')[0]} width="296" height="184" alt=""  onClick={redirect}/>                <div className="card--title2">{props.type}</div>
 
 
-                    <a href="">
+                    {/* <a> */}
 
                       
 
@@ -28,7 +28,7 @@ const MallPropertyBoxes = (props) => {
                                 {/* <span className="view2">View<i className="bi bi-arrow-right-short"></i></span> */}
                             </div>
                         </div>
-                    </a>
+                    {/* </a> */}
                 </div>
             </div>
         </div>
